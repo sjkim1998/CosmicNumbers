@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ibz-k2-5jT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HpZ-v0-WxA">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -1147,7 +1147,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Dxg-Bi-9HT" kind="presentation" id="xjw-i4-Mgm"/>
+                                    <segue destination="HpZ-v0-WxA" kind="presentation" id="e9o-iq-weE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: The number line starts at 0 instead of 1." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUa-fn-aYz">
@@ -1184,85 +1184,10 @@
             </objects>
             <point key="canvasLocation" x="-899" y="443"/>
         </scene>
-        <!--Level Four Game-->
-        <scene sceneID="IpF-wC-o9I">
-            <objects>
-                <viewController id="Dxg-Bi-9HT" customClass="LevelFourGame" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3OT-MB-h0g">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars" translatesAutoresizingMaskIntoConstraints="NO" id="p4k-Au-ZXY">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clo-hX-caF">
-                                <rect key="frame" x="862" y="694" width="142" height="54"/>
-                                <color key="backgroundColor" red="0.42849117520000002" green="0.174444288" blue="0.5652055144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES"/>
-                                </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="clo-hX-caF" secondAttribute="height" multiplier="61:27" constant="20.000000000000014" id="FCp-aR-JgR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
-                                <state key="normal" title="Submit">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="Submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y9c-AB-cQO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTB-Xd-Yfp">
-                                <rect key="frame" x="10" y="10" width="39" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Back">
-                                    <accessibilityTraits key="traits" none="YES"/>
-                                </accessibility>
-                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <state key="normal" title="X">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="KGi-3L-dde" kind="presentation" id="fXO-cc-D9P"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is Astronaut Tommy's number greater than, equal to, or less than x?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAp-5x-WkX">
-                                <rect key="frame" x="0.0" y="20" width="1062" height="68.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="AAp-5x-WkX" secondAttribute="height" multiplier="619:42" constant="54.083333333333371" id="iYR-JS-Jo3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="clo-hX-caF" secondAttribute="bottom" constant="20" symbolic="YES" id="0mm-MT-xzl"/>
-                            <constraint firstItem="AAp-5x-WkX" firstAttribute="width" secondItem="AAp-5x-WkX" secondAttribute="height" multiplier="619:42" constant="54.083333333333371" id="7SB-vx-Urb"/>
-                            <constraint firstItem="p4k-Au-ZXY" firstAttribute="top" secondItem="3OT-MB-h0g" secondAttribute="top" id="EZJ-Ja-Vzl"/>
-                            <constraint firstItem="AAp-5x-WkX" firstAttribute="top" secondItem="x65-iW-jgv" secondAttribute="top" id="O92-9R-EtL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="AAp-5x-WkX" secondAttribute="trailing" constant="-58" id="Phd-tb-A6N"/>
-                            <constraint firstAttribute="trailing" secondItem="p4k-Au-ZXY" secondAttribute="trailing" id="T95-hp-dCd"/>
-                            <constraint firstItem="clo-hX-caF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="x65-iW-jgv" secondAttribute="leading" symbolic="YES" id="Tkk-FO-Bmi"/>
-                            <constraint firstItem="clo-hX-caF" firstAttribute="width" secondItem="clo-hX-caF" secondAttribute="height" multiplier="61:27" constant="20.000000000000014" id="eXL-xH-N4U"/>
-                            <constraint firstItem="clo-hX-caF" firstAttribute="trailing" secondItem="3OT-MB-h0g" secondAttribute="trailingMargin" id="ghe-3s-LQ8"/>
-                            <constraint firstItem="AAp-5x-WkX" firstAttribute="width" secondItem="AAp-5x-WkX" secondAttribute="height" multiplier="619:42" constant="54.083333333333371" id="k2x-oN-UsT"/>
-                            <constraint firstItem="p4k-Au-ZXY" firstAttribute="bottom" secondItem="x65-iW-jgv" secondAttribute="bottom" id="la2-Dc-tLb"/>
-                            <constraint firstItem="AAp-5x-WkX" firstAttribute="leading" secondItem="3OT-MB-h0g" secondAttribute="leading" id="qnQ-LC-H8W"/>
-                            <constraint firstItem="AAp-5x-WkX" firstAttribute="leading" secondItem="p4k-Au-ZXY" secondAttribute="leading" id="yle-MX-6DB"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="x65-iW-jgv"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4p5-OG-4gw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-212" y="443"/>
-        </scene>
-        <!--Level One Game-->
+        <!--Level Three Game-->
         <scene sceneID="AIh-SL-4WM">
             <objects>
-                <viewController title="Level One Game" id="GeS-h0-5oK" customClass="LevelThreeGame" customModule="Number_Line" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Level Three Game" id="GeS-h0-5oK" customClass="LevelThreeGame" customModule="Number_Line" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bm4-re-UvS">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1391,6 +1316,119 @@
             </objects>
             <point key="canvasLocation" x="-212" y="-282"/>
         </scene>
+        <!--Level Four Game-->
+        <scene sceneID="GR5-54-FQ7">
+            <objects>
+                <viewController title="Level Four Game" id="HpZ-v0-WxA" customClass="LevelFourGame" customModule="Number_Line" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cVK-3I-AXk">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="stars" translatesAutoresizingMaskIntoConstraints="NO" id="fOk-cA-nR1">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gn-er-F8H" customClass="Line" customModule="Number_Line" customModuleProvider="target">
+                                <rect key="frame" x="79" y="199" width="866" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5gn-er-F8H" secondAttribute="height" multiplier="433:75" id="NQR-NO-i3A"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Is Astronaut Tommy's number greater than, equal to, or less than x?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoM-5a-Boa">
+                                <rect key="frame" x="-29" y="12" width="1083" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uoM-5a-Boa" secondAttribute="height" multiplier="619:42" constant="45.714285714285779" id="qSD-s8-PVr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRd-e1-GJd">
+                                <rect key="frame" x="20" y="0.0" width="39" height="84"/>
+                                <accessibility key="accessibilityConfiguration" label="Back">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KGi-3L-dde" kind="presentation" id="qOF-F9-vxY"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="astronaut" translatesAutoresizingMaskIntoConstraints="NO" id="Y5X-aE-dpO">
+                                <rect key="frame" x="462" y="91" width="101" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Astronaut Tommy">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwZ-d9-dlM">
+                                <rect key="frame" x="862" y="694" width="142" height="54"/>
+                                <color key="backgroundColor" red="0.42745098040000001" green="0.17254901959999999" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dwZ-d9-dlM" secondAttribute="height" multiplier="61:27" constant="20.000000000000014" id="wKS-yk-1ws"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="astronaut" translatesAutoresizingMaskIntoConstraints="NO" id="rkd-NL-TJY">
+                                <rect key="frame" x="198" y="519" width="101" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Astronaut Tommy">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aX2-qc-c5g">
+                                <rect key="frame" x="739" y="533" width="42" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eyD-iE-oKV">
+                                <rect key="frame" x="0.0" y="488" width="1024" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uoM-5a-Boa" firstAttribute="centerX" secondItem="fOk-cA-nR1" secondAttribute="centerX" id="1uE-4Q-b0C"/>
+                            <constraint firstItem="fOk-cA-nR1" firstAttribute="top" secondItem="cVK-3I-AXk" secondAttribute="top" id="29f-Kc-RFh"/>
+                            <constraint firstAttribute="bottom" secondItem="dwZ-d9-dlM" secondAttribute="bottom" constant="20" symbolic="YES" id="3IL-2e-hmr"/>
+                            <constraint firstItem="5gn-er-F8H" firstAttribute="centerX" secondItem="uoM-5a-Boa" secondAttribute="centerX" id="5rx-yG-VnH"/>
+                            <constraint firstItem="dwZ-d9-dlM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="t9V-Po-Jpi" secondAttribute="leading" symbolic="YES" id="Jms-IO-0I1"/>
+                            <constraint firstItem="dwZ-d9-dlM" firstAttribute="trailing" secondItem="cVK-3I-AXk" secondAttribute="trailingMargin" id="KtU-xz-ZmI"/>
+                            <constraint firstItem="5gn-er-F8H" firstAttribute="leading" secondItem="t9V-Po-Jpi" secondAttribute="leading" constant="79" id="OMy-YR-n6I"/>
+                            <constraint firstItem="dwZ-d9-dlM" firstAttribute="width" secondItem="dwZ-d9-dlM" secondAttribute="height" multiplier="61:27" constant="20.000000000000014" id="Ou0-mD-DoU"/>
+                            <constraint firstItem="uoM-5a-Boa" firstAttribute="width" secondItem="uoM-5a-Boa" secondAttribute="height" multiplier="619:42" constant="45.714285714285779" id="UOh-ie-9HX"/>
+                            <constraint firstItem="fOk-cA-nR1" firstAttribute="top" secondItem="mRd-e1-GJd" secondAttribute="top" id="YjW-wh-JYa"/>
+                            <constraint firstItem="uoM-5a-Boa" firstAttribute="centerX" secondItem="cVK-3I-AXk" secondAttribute="centerX" id="aHo-pq-BNl"/>
+                            <constraint firstItem="uoM-5a-Boa" firstAttribute="top" secondItem="cVK-3I-AXk" secondAttribute="topMargin" constant="17" id="iIL-Ce-04x"/>
+                            <constraint firstItem="uoM-5a-Boa" firstAttribute="leading" secondItem="t9V-Po-Jpi" secondAttribute="leading" constant="47" id="kol-Ub-ofc"/>
+                            <constraint firstItem="5gn-er-F8H" firstAttribute="centerY" secondItem="cVK-3I-AXk" secondAttribute="centerY" constant="-110" id="pIM-ig-FT3"/>
+                            <constraint firstItem="fOk-cA-nR1" firstAttribute="leading" secondItem="cVK-3I-AXk" secondAttribute="leading" id="tKW-ae-2lo"/>
+                            <constraint firstItem="mRd-e1-GJd" firstAttribute="leading" secondItem="cVK-3I-AXk" secondAttribute="leadingMargin" id="wia-n1-GRC"/>
+                            <constraint firstItem="5gn-er-F8H" firstAttribute="width" secondItem="5gn-er-F8H" secondAttribute="height" multiplier="433:75" id="wsq-Uc-ivJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="t9V-Po-Jpi"/>
+                    </view>
+                    <connections>
+                        <outlet property="astronaut" destination="Y5X-aE-dpO" id="ncR-B2-gyJ"/>
+                        <outlet property="lineRef" destination="5gn-er-F8H" id="okL-aK-xwD"/>
+                        <outlet property="pickerItem" destination="eyD-iE-oKV" id="1OM-9v-Jf3"/>
+                        <outlet property="question" destination="uoM-5a-Boa" id="Sjp-xU-vhX"/>
+                        <outlet property="questionNum" destination="aX2-qc-c5g" id="Sle-VB-8L9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5fi-g2-Cbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-212.109375" y="442.96875"/>
+        </scene>
     </scenes>
     <resources>
         <image name="astronaut" width="77" height="87"/>
@@ -1403,14 +1441,14 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="di4-Dy-hc7"/>
-        <segue reference="fXO-cc-D9P"/>
-        <segue reference="Y3n-Si-I4X"/>
+        <segue reference="qOF-F9-vxY"/>
+        <segue reference="uQI-Yn-X27"/>
         <segue reference="Vmt-Sg-hCl"/>
         <segue reference="Mlf-5l-hd8"/>
         <segue reference="d2X-AF-QJ1"/>
         <segue reference="wGu-VF-hqd"/>
         <segue reference="kzi-Gx-tnR"/>
-        <segue reference="mp5-z6-SKw"/>
+        <segue reference="Uzh-xv-myr"/>
         <segue reference="BKW-2W-pRu"/>
         <segue reference="UFV-fu-KT4"/>
     </inferredMetricsTieBreakers>
