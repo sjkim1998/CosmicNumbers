@@ -33,7 +33,7 @@ class IncorrectPopUpViewController: UIViewController {
                 tryagainhint.text = "The correct answer is greater than your answer"
             }
             else {
-                tryagainhint.text = "The correct answer is lesser than your answer"
+                tryagainhint.text = "The correct answer is less than your answer"
             }
             self.showAnimate()
         }

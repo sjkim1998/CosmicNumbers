@@ -12,13 +12,10 @@ import AVFoundation
 class SettingsViewController: UIViewController {
     var player:AVAudioPlayer = AVAudioPlayer()
     
-//    // Directs player back to the start menu
-//    @IBAction func ExitSettings(_ sender: Any) {
-//         performSegue(withIdentifier: "SettingsExit", sender: self)
-//    }
-   
-    // Function to allow player to play music
-//    @IBAction func PlayMusic(_sender: Any) {
+
+    // This page is currently not implemented
+    
+    @IBAction func Play(_ sender: Any) {
 //        do {
 //            let audioPath = Bundle.main.path(forResource: "music", ofType: "mp3")
 //            try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
@@ -28,33 +25,9 @@ class SettingsViewController: UIViewController {
 //        }
 //        player.numberOfLoops = -1
 //        player.play()
-//    }
-//
-    @IBAction func Play(_ sender: Any) {
-        do {
-            let audioPath = Bundle.main.path(forResource: "music", ofType: "mp3")
-            try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-        }
-        catch {
-            print(error)
-        }
-        player.numberOfLoops = -1
-        player.play()
     }
     
     @IBAction func Stop(_ sender: Any) {
-        do {
-            let audioPath = Bundle.main.path(forResource: "music", ofType: "mp3")
-            try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
-        }
-        catch {
-            print(error)
-        }
-        player.numberOfLoops = 0
-        player.stop()
-    }
-    // Function to allow player to stop the music
-//    @IBAction func StopMusic(_sender: Any) {
 //        do {
 //            let audioPath = Bundle.main.path(forResource: "music", ofType: "mp3")
 //            try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
@@ -64,7 +37,7 @@ class SettingsViewController: UIViewController {
 //        }
 //        player.numberOfLoops = 0
 //        player.stop()
-//    }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

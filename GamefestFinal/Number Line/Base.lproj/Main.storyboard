@@ -39,7 +39,7 @@
                                     <constraint firstAttribute="width" secondItem="J5b-kt-Qlo" secondAttribute="height" multiplier="433:75" id="6jl-V4-TUs"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag the astronaut to tick and click submit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ay7-S2-6Pc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag Astronaut Tommy to tick and click submit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ay7-S2-6Pc">
                                 <rect key="frame" x="46.5" y="159" width="931" height="59.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ay7-S2-6Pc" secondAttribute="height" multiplier="619:42" constant="54.083333333333371" id="w6h-oc-pai"/>
@@ -48,9 +48,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="astronaut.png" translatesAutoresizingMaskIntoConstraints="NO" id="aBP-MU-YGn">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="astronaut" translatesAutoresizingMaskIntoConstraints="NO" id="aBP-MU-YGn">
                                 <rect key="frame" x="20" y="25" width="77" height="87"/>
-                                <accessibility key="accessibilityConfiguration" label="astronaut">
+                                <accessibility key="accessibilityConfiguration" label="Astronaut Tommy">
                                     <accessibilityTraits key="traits" none="YES"/>
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
@@ -132,7 +132,9 @@
                     <connections>
                         <outlet property="astronaut" destination="aBP-MU-YGn" id="wzf-YD-QsD"/>
                         <outlet property="astronautPlaceLabel" destination="ay7-S2-6Pc" id="qiI-D4-EyO"/>
+                        <outlet property="back" destination="9OE-ol-bdn" id="7Jw-kV-GRL"/>
                         <outlet property="lineRef" destination="J5b-kt-Qlo" id="Fmh-WN-nm4"/>
+                        <outlet property="submitBtn" destination="Gbw-Gh-TIu" id="9ce-T7-QWJ"/>
                         <segue destination="Ibz-k2-5jT" kind="presentation" identifier="ExitToStartMenu" id="BKW-2W-pRu"/>
                         <segue destination="NYN-zJ-RB1" kind="presentation" identifier="Submit" id="LWI-Tf-gGM"/>
                         <segue destination="Hbl-Vc-ebS" kind="show" identifier="toCongrats" id="K1e-qQ-yTv"/>
@@ -332,21 +334,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PiC-ly-zNu">
-                                <rect key="frame" x="102" y="265" width="186" height="60"/>
-                                <color key="backgroundColor" red="0.42849117520000002" green="0.174444288" blue="0.5652055144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" none="YES"/>
-                                </accessibility>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <state key="normal" title="Level 1">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Ope-iO-51q" kind="presentation" id="1xc-tK-KMV"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzl-5F-lfX">
                                 <rect key="frame" x="259" y="31" width="507" height="72"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -369,19 +356,23 @@
                                     <action selector="ExitToStart:" destination="NYN-zJ-RB1" eventType="touchUpInside" id="jTH-rk-OQt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHu-SN-C7i">
-                                <rect key="frame" x="729" y="265" width="186" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PiC-ly-zNu">
+                                <rect key="frame" x="173" y="265" width="186" height="60"/>
                                 <color key="backgroundColor" red="0.42849117520000002" green="0.174444288" blue="0.5652055144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <state key="normal" title="Level 3">
+                                <state key="normal" title="Level 1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Ope-iO-51q" kind="presentation" id="1xc-tK-KMV"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKW-sO-0Zb">
-                                <rect key="frame" x="419" y="265" width="186" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKW-sO-0Zb">
+                                <rect key="frame" x="667" y="265" width="186" height="60"/>
                                 <color key="backgroundColor" red="0.42849117520000002" green="0.174444288" blue="0.5652055144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
@@ -394,22 +385,50 @@
                                     <segue destination="rt8-Dx-Zq0" kind="presentation" id="9Ju-uY-OcL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHu-SN-C7i">
+                                <rect key="frame" x="173" y="410" width="186" height="60"/>
+                                <color key="backgroundColor" red="0.42849117520000002" green="0.174444288" blue="0.5652055144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <state key="normal" title="Level 3">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWr-bJ-wHw">
+                                <rect key="frame" x="667" y="410" width="186" height="60"/>
+                                <color key="backgroundColor" red="0.42849117520000002" green="0.174444288" blue="0.5652055144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="1"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <state key="normal" title="Level 4">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="DNQ-cZ-WJr" firstAttribute="trailing" secondItem="YHu-SN-C7i" secondAttribute="trailing" constant="109" id="1UK-us-lG3"/>
-                            <constraint firstItem="YHu-SN-C7i" firstAttribute="top" secondItem="DNQ-cZ-WJr" secondAttribute="top" constant="245" id="5px-lS-Usn"/>
-                            <constraint firstItem="Wzl-5F-lfX" firstAttribute="centerX" secondItem="JKW-sO-0Zb" secondAttribute="centerX" constant="0.5" id="9dw-Xu-ZRP"/>
-                            <constraint firstItem="PiC-ly-zNu" firstAttribute="top" secondItem="DNQ-cZ-WJr" secondAttribute="top" constant="245" id="JVl-II-LAr"/>
+                            <constraint firstItem="DNQ-cZ-WJr" firstAttribute="trailing" secondItem="YHu-SN-C7i" secondAttribute="trailing" constant="665" id="1UK-us-lG3"/>
+                            <constraint firstItem="YHu-SN-C7i" firstAttribute="top" secondItem="DNQ-cZ-WJr" secondAttribute="top" constant="390" id="5px-lS-Usn"/>
+                            <constraint firstItem="PiC-ly-zNu" firstAttribute="baseline" secondItem="JKW-sO-0Zb" secondAttribute="baseline" id="83h-8m-N05"/>
+                            <constraint firstItem="Wzl-5F-lfX" firstAttribute="centerX" secondItem="JKW-sO-0Zb" secondAttribute="centerX" constant="-247.5" id="9dw-Xu-ZRP"/>
+                            <constraint firstItem="PiC-ly-zNu" firstAttribute="leading" secondItem="YHu-SN-C7i" secondAttribute="leading" id="BNC-L5-KJ6"/>
+                            <constraint firstItem="YWr-bJ-wHw" firstAttribute="leading" secondItem="JKW-sO-0Zb" secondAttribute="leading" id="CUe-8J-Vug"/>
                             <constraint firstItem="Wzl-5F-lfX" firstAttribute="leading" secondItem="DNQ-cZ-WJr" secondAttribute="leading" constant="259" id="Mz6-jQ-NTj"/>
                             <constraint firstItem="gqT-hC-vPJ" firstAttribute="leading" secondItem="DNQ-cZ-WJr" secondAttribute="leading" constant="20" id="Oqd-pu-ZHw"/>
-                            <constraint firstItem="JKW-sO-0Zb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PiC-ly-zNu" secondAttribute="trailing" constant="-186" id="OvO-KN-9Jq"/>
-                            <constraint firstItem="PiC-ly-zNu" firstAttribute="leading" secondItem="DNQ-cZ-WJr" secondAttribute="leading" constant="102" id="Uiq-5K-sih"/>
+                            <constraint firstItem="YWr-bJ-wHw" firstAttribute="baseline" secondItem="YHu-SN-C7i" secondAttribute="baseline" id="ROD-s3-sYg"/>
                             <constraint firstItem="Wzl-5F-lfX" firstAttribute="top" secondItem="DNQ-cZ-WJr" secondAttribute="top" constant="11" id="VRH-sh-Vcy"/>
+                            <constraint firstItem="PiC-ly-zNu" firstAttribute="leading" secondItem="DNQ-cZ-WJr" secondAttribute="leading" constant="173" id="cEP-JD-5bJ"/>
+                            <constraint firstItem="YWr-bJ-wHw" firstAttribute="trailing" secondItem="JKW-sO-0Zb" secondAttribute="trailing" id="cxm-4L-AHK"/>
                             <constraint firstItem="gqT-hC-vPJ" firstAttribute="top" secondItem="Wzl-5F-lfX" secondAttribute="top" constant="-6" id="iLk-qe-GXo"/>
+                            <constraint firstItem="DNQ-cZ-WJr" firstAttribute="trailing" secondItem="YWr-bJ-wHw" secondAttribute="trailing" constant="171" id="qd6-2y-qkf"/>
                             <constraint firstItem="Wzl-5F-lfX" firstAttribute="leading" secondItem="gqT-hC-vPJ" secondAttribute="trailing" constant="137" id="sje-36-Ybh"/>
-                            <constraint firstItem="YHu-SN-C7i" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JKW-sO-0Zb" secondAttribute="trailing" constant="-186" id="ugo-RI-UPD"/>
-                            <constraint firstItem="JKW-sO-0Zb" firstAttribute="baseline" secondItem="YHu-SN-C7i" secondAttribute="baseline" id="y9Z-rM-k9l"/>
+                            <constraint firstItem="YHu-SN-C7i" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="JKW-sO-0Zb" secondAttribute="trailing" constant="-680" id="ugo-RI-UPD"/>
+                            <constraint firstItem="JKW-sO-0Zb" firstAttribute="baseline" secondItem="YHu-SN-C7i" secondAttribute="baseline" constant="-145" id="y9Z-rM-k9l"/>
+                            <constraint firstItem="PiC-ly-zNu" firstAttribute="trailing" secondItem="YHu-SN-C7i" secondAttribute="trailing" id="zHG-dd-QXf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DNQ-cZ-WJr"/>
                     </view>
@@ -925,9 +944,12 @@
                                     <action selector="buttonPressed:" destination="00J-QT-lO2" eventType="touchUpInside" id="lzP-Kw-lnU"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="astronaut.png" translatesAutoresizingMaskIntoConstraints="NO" id="bgP-Vs-BZO">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="astronaut" translatesAutoresizingMaskIntoConstraints="NO" id="bgP-Vs-BZO">
                                 <rect key="frame" x="459" y="105" width="107" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="Astronaut Tommy">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -971,7 +993,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="astronaut.png" width="77" height="87"/>
+        <image name="astronaut" width="77" height="87"/>
         <image name="greatjob" width="600" height="400"/>
         <image name="levelselector" width="960" height="600"/>
         <image name="stars" width="1920" height="1080"/>
@@ -980,12 +1002,12 @@
         <image name="tryagain" width="600" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uQI-Yn-X27"/>
-        <segue reference="Vmt-Sg-hCl"/>
+        <segue reference="BgU-yG-a7o"/>
+        <segue reference="1xc-tK-KMV"/>
         <segue reference="9Ju-uY-OcL"/>
-        <segue reference="aeP-TH-NSU"/>
-        <segue reference="OhJ-Ye-zOG"/>
-        <segue reference="mp5-z6-SKw"/>
+        <segue reference="i6z-KA-Gtd"/>
+        <segue reference="K1e-qQ-yTv"/>
+        <segue reference="LWI-Tf-gGM"/>
         <segue reference="n49-uk-T4Q"/>
         <segue reference="DCr-hj-1Wt"/>
     </inferredMetricsTieBreakers>

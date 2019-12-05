@@ -15,14 +15,12 @@ class LevelTwoGame: UIViewController {
          performSegue(withIdentifier: "Submit", sender: self)
     }
     
-    // Reference to the astronaut image
+    // Reference to the visual objects
     @IBOutlet weak var astronaut: UIImageView!
-    
-    // Reference to the question label
+    @IBOutlet weak var back: UIButton!
     @IBOutlet weak var astronautPlaceLabel: UILabel!
-    
-    // Reference to the line
     @IBOutlet weak var lineRef: Line!
+    @IBOutlet weak var submitBtn: UIButton!
     
     var previousVC:UIViewController?=nil
     var previousVCSuccess:UIViewController?=nil
@@ -45,18 +43,18 @@ class LevelTwoGame: UIViewController {
         
         // Make the screen accessible, and specify the question with a randomly chosen number from 0-5
         isAccessibilityElement = true 
-        astronautPlaceLabel.text="Drag the astronaut to tick \(desiredNumber)" + " and click submit"
+        astronautPlaceLabel.text="Drag Astronaut Tommy to tick \(desiredNumber)" + " and click submit"
         
         // If the voiceover accessible function isn't enabled, read out the question using audio kit
-        if(!UIAccessibility.isVoiceOverRunning){
-            let utterance = AVSpeechUtterance(string: "Drag the astronaut to tick \(desiredNumber)" + " and click submit")
-            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-            utterance.rate = 0.5
-            utterance.volume=5
-    
-            let synthesizer = AVSpeechSynthesizer()
-            synthesizer.speak(utterance)
-        }
+//        if(!UIAccessibility.isVoiceOverRunning){
+//            let utterance = AVSpeechUtterance(string: "Drag Astronaut Tommy to tick \(desiredNumber)" + " and click submit")
+//            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+//            utterance.rate = 0.5
+//            utterance.volume=5
+//
+//            let synthesizer = AVSpeechSynthesizer()
+//            synthesizer.speak(utterance)
+//        }
     }
     
     // Based on whether the player answered the question correctly, this function will direct the player to either incorrect/correct popup window
@@ -129,6 +127,7 @@ class LevelTwoGame: UIViewController {
             accessibleNumbers.append(label)
             i = i+1
         }
+        self.view.accessibilityElements = [astronautPlaceLabel, astronaut, back, lineRef, accessibleNumbers, submitBtn];
     }
     
     // Handle pan gesture - identify where the player drag the astronaut to

@@ -42,7 +42,7 @@ class LevelOneGame: UIViewController {
 
         // If the voiceover accessible function isn't enabled, read out the question using audio kit
 //        if(!UIAccessibility.isVoiceOverRunning){
-//            let utterance = AVSpeechUtterance(string: "Where is the astronaut at?")
+//            let utterance = AVSpeechUtterance(string: "Where is Astronaut Tommy at?")
 //            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
 //            utterance.rate = 0.5
 //            utterance.volume=5
@@ -82,76 +82,6 @@ class LevelOneGame: UIViewController {
                 answer.setTitleColor(UIColor.black, for: .normal)
                 answer.accessibilityValue = ""
             }
-        }
-        
-//        for answer in answerArray {
-//            if answerSelected && answer !== button {
-//                answerSelected = false
-//                answer.backgroundColor = UIColor(red:0.90, green:0.73, blue:0.17, alpha:1.0)
-//                answer.setTitleColor(UIColor.black, for: .normal)
-//            }
-//            if answer.isSelected && answer !== button {
-//                answer.isSelected = false
-//                answer.backgroundColor = UIColor(red:0.90, green:0.73, blue:0.17, alpha:1.0)
-//                answer.setTitleColor(UIColor.black, for: .normal)
-//            }
-        //}
-        
-        print(selectedAnswer)
-        
-//        for answer in answerArray {
-//            if (answer.isSelected) {
-//                answer.isSelected = false
-//                button.backgroundColor = UIColor(red:0.90, green:0.73, blue:0.17, alpha:1.0)
-//                button.setTitleColor(UIColor.black, for: .normal)
-//            }
-//            else if (!answer.isSelected && answer == button) {
-//                answer.isSelected = true
-//                button.backgroundColor = UIColor(red:0.43, green:0.17, blue:0.56, alpha:1.0)
-//                button.setTitleColor(UIColor.white, for: .normal)
-//                if let text = button.titleLabel?.text {
-//                    selectedAnswer = Int(text) ?? 0
-//                }
-//            }
-//        }
-        
-//        if (answerClicked == true) {
-//            answerClicked = false
-//            button.backgroundColor = UIColor(red:0.90, green:0.73, blue:0.17, alpha:1.0)
-//            button.setTitleColor(UIColor.black, for: .normal)
-//            playSound()
-//        }
-//        else {
-//            answerClicked = true
-//            button.backgroundColor = UIColor(red:0.43, green:0.17, blue:0.56, alpha:1.0)
-//            button.setTitleColor(UIColor.white, for: .normal)
-//            if let text = button.titleLabel?.text {
-//                selectedAnswer = Int(text) ?? 0
-//            }
-//            playSound()
-//        }
-    }
-    
-    func deselectAllButtons(){
-        
-    }
-    // Play sound when the player clicks an answer button
-    func playSound() {
-        guard let url = Bundle.main.url(forResource: "selected", withExtension: "mp3") else { return }
-
-        do {
-            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
-            try AVAudioSession.sharedInstance().setActive(true)
-
-            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-
-            guard let player = player else { return }
-
-            player.setVolume(20, fadeDuration: 0)
-            player.play()
-
-        } catch let error {
-            print(error.localizedDescription)
         }
     }
     
