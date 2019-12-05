@@ -28,48 +28,90 @@ class LevelOneGame: UIViewController {
     var selectedAnswer = 0
     var howManyLevelsAreDone:Int=0
     var previousVC:UIViewController?=nil
+    var answerArray: [UIButton]=[]
+    var answerSelected = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // save answer buttons into an array
+        answerArray = [zero, one, two, three, four, five]
+        
         // Make the screen accessible, and specify the question with a randomly chosen number from 0-5
         isAccessibilityElement = true
 
         // If the voiceover accessible function isn't enabled, read out the question using audio kit
-        if(!UIAccessibility.isVoiceOverRunning){
-            let utterance = AVSpeechUtterance(string: "Where is the astronaut at?")
-            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-            utterance.rate = 0.5
-            utterance.volume=5
-
-            let synthesizer = AVSpeechSynthesizer()
-            synthesizer.speak(utterance)
-        }
+//        if(!UIAccessibility.isVoiceOverRunning){
+//            let utterance = AVSpeechUtterance(string: "Where is the astronaut at?")
+//            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+//            utterance.rate = 0.5
+//            utterance.volume=5
+//
+//            let synthesizer = AVSpeechSynthesizer()
+//            synthesizer.speak(utterance)
+//        }
         
         let linerefbounds:CGRect=lineRef.bounds
         var minXOfLine = lineRef.center.x-(linerefbounds.width/2) - 30
         astronaut.frame = CGRect(x: minXOfLine + ((linerefbounds.width-40) / 5 * CGFloat(desiredNumber)),  y: lineRef.center.y, width: astronaut.frame.size.width, height: astronaut.frame.size.height)
     }
     
-    @IBAction func buttonPressed(_ sender: UIButton) {
+    @IBAction func buttonPressed(_ sender: Any) {
         guard let button = sender as? UIButton else {
             return
         }
-        if (answerClicked == true) {
-            answerClicked = false
-            button.backgroundColor = UIColor(red:0.90, green:0.73, blue:0.17, alpha:1.0)
-            button.setTitleColor(UIColor.black, for: .normal)
-            playSound()
+        
+        button.isSelected = true
+        button.backgroundColor = UIColor(red:0.43, green:0.17, blue:0.56, alpha:1.0)
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.adjustsImageWhenHighlighted = false
+        UIAccessibility.post(notification: .announcement, argument: "Selected")
+//        playSound()
+        if let text = button.titleLabel?.text {
+            selectedAnswer = Int(text) ?? 0
         }
-        else {
-            answerClicked = true
-            button.backgroundColor = UIColor(red:0.43, green:0.17, blue:0.56, alpha:1.0)
-            button.setTitleColor(UIColor.white, for: .normal)
-            if let text = button.titleLabel?.text {
-                selectedAnswer = Int(text) ?? 0
+        
+        for answer in answerArray {
+            if answer.isSelected && answer !== button {
+                answer.isSelected = false
+                answer.backgroundColor = UIColor(red:0.90, green:0.73, blue:0.17, alpha:1.0)
+                answer.setTitleColor(UIColor.black, for: .normal)
             }
-            playSound()
         }
+        
+        print(selectedAnswer)
+        
+//        for answer in answerArray {
+//            if (answer.isSelected) {
+//                answer.isSelected = false
+//                button.backgroundColor = UIColor(red:0.90, green:0.73, blue:0.17, alpha:1.0)
+//                button.setTitleColor(UIColor.black, for: .normal)
+//            }
+//            else if (!answer.isSelected && answer == button) {
+//                answer.isSelected = true
+//                button.backgroundColor = UIColor(red:0.43, green:0.17, blue:0.56, alpha:1.0)
+//                button.setTitleColor(UIColor.white, for: .normal)
+//                if let text = button.titleLabel?.text {
+//                    selectedAnswer = Int(text) ?? 0
+//                }
+//            }
+//        }
+        
+//        if (answerClicked == true) {
+//            answerClicked = false
+//            button.backgroundColor = UIColor(red:0.90, green:0.73, blue:0.17, alpha:1.0)
+//            button.setTitleColor(UIColor.black, for: .normal)
+//            playSound()
+//        }
+//        else {
+//            answerClicked = true
+//            button.backgroundColor = UIColor(red:0.43, green:0.17, blue:0.56, alpha:1.0)
+//            button.setTitleColor(UIColor.white, for: .normal)
+//            if let text = button.titleLabel?.text {
+//                selectedAnswer = Int(text) ?? 0
+//            }
+//            playSound()
+//        }
     }
     
     func deselectAllButtons(){
@@ -77,18 +119,19 @@ class LevelOneGame: UIViewController {
     }
     // Play sound when the player clicks an answer button
     func playSound() {
-        guard let url = Bundle.main.url(forResource: "splat", withExtension: "mp3") else { return }
-        
+        guard let url = Bundle.main.url(forResource: "selected", withExtension: "mp3") else { return }
+
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
             try AVAudioSession.sharedInstance().setActive(true)
-            
+
             player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
-            
+
             guard let player = player else { return }
-            
+
+            player.setVolume(90, fadeDuration: 0)
             player.play()
-            
+
         } catch let error {
             print(error.localizedDescription)
         }

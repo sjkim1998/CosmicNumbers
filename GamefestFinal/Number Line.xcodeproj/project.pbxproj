@@ -25,6 +25,7 @@
 		317C26B7221F5F6A00B4F12A /* Number_LineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317C26B6221F5F6A00B4F12A /* Number_LineTests.swift */; };
 		317C26C2221F5F6A00B4F12A /* Number_LineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317C26C1221F5F6A00B4F12A /* Number_LineUITests.swift */; };
 		317C26D0221F5FF100B4F12A /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317C26CF221F5FF100B4F12A /* Line.swift */; };
+		31923F5C2398CE2E00A36DAB /* selected.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 31923F5B2398CE2E00A36DAB /* selected.mp3 */; };
 		9A1775A622425AC0005E3DD7 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1775A522425AC0005E3DD7 /* StartScreenViewController.swift */; };
 		9A2A0A73224E70ED006AA59F /* LevelSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2A0A72224E70ED006AA59F /* LevelSelectorViewController.swift */; };
 		9AA3298222491A69008ADB9D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA3298122491A69008ADB9D /* SettingsViewController.swift */; };
@@ -73,6 +74,7 @@
 		317C26C1221F5F6A00B4F12A /* Number_LineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number_LineUITests.swift; sourceTree = "<group>"; };
 		317C26C3221F5F6A00B4F12A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		317C26CF221F5FF100B4F12A /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		31923F5B2398CE2E00A36DAB /* selected.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = selected.mp3; sourceTree = "<group>"; };
 		9A1775A522425AC0005E3DD7 /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		9A2A0A72224E70ED006AA59F /* LevelSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectorViewController.swift; sourceTree = "<group>"; };
 		9AA3298122491A69008ADB9D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				317A81B3232B5D5700DFBCC0 /* Assets.xcassets */,
 				3170E28023501232000CC8C5 /* AppIcon.appiconset */,
 				317C26AD221F5F6A00B4F12A /* Info.plist */,
+				31923F5B2398CE2E00A36DAB /* selected.mp3 */,
 				3170E27E23501218000CC8C5 /* music.mp3 */,
 				3170E27C23501207000CC8C5 /* astronaut.png */,
 				D604CC7B2278E27000783367 /* splat.mp3 */,
@@ -277,6 +280,7 @@
 				D604CC7C2278E27000783367 /* splat.mp3 in Resources */,
 				317C26AC221F5F6A00B4F12A /* LaunchScreen.storyboard in Resources */,
 				317A81B4232B5D5700DFBCC0 /* Assets.xcassets in Resources */,
+				31923F5C2398CE2E00A36DAB /* selected.mp3 in Resources */,
 				317C26A7221F5F6900B4F12A /* Main.storyboard in Resources */,
 				3170E28123501233000CC8C5 /* AppIcon.appiconset in Resources */,
 				3170E27F23501218000CC8C5 /* music.mp3 in Resources */,
@@ -493,17 +497,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J4QZ65T39F;
+				DEVELOPMENT_TEAM = BFZYMS7L7S;
 				INFOPLIST_FILE = "Number Line/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nick.numberline;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.unc.cs.number-line";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -512,17 +516,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = J4QZ65T39F;
+				DEVELOPMENT_TEAM = BFZYMS7L7S;
 				INFOPLIST_FILE = "Number Line/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nick.numberline;
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.unc.cs.number-line";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
