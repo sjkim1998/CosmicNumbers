@@ -26,6 +26,10 @@
 		317C26C2221F5F6A00B4F12A /* Number_LineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317C26C1221F5F6A00B4F12A /* Number_LineUITests.swift */; };
 		317C26D0221F5FF100B4F12A /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317C26CF221F5FF100B4F12A /* Line.swift */; };
 		31923F5C2398CE2E00A36DAB /* selected.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 31923F5B2398CE2E00A36DAB /* selected.mp3 */; };
+		31923F5E23992B1200A36DAB /* LevelThreeGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31923F5D23992B1200A36DAB /* LevelThreeGame.swift */; };
+		31923F6023992B2300A36DAB /* LevelFourGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31923F5F23992B2300A36DAB /* LevelFourGame.swift */; };
+		31923F6223992BCE00A36DAB /* LevelThreeTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31923F6123992BCE00A36DAB /* LevelThreeTutorial.swift */; };
+		31923F6423992BE000A36DAB /* LevelFourTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31923F6323992BE000A36DAB /* LevelFourTutorial.swift */; };
 		9A1775A622425AC0005E3DD7 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1775A522425AC0005E3DD7 /* StartScreenViewController.swift */; };
 		9A2A0A73224E70ED006AA59F /* LevelSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2A0A72224E70ED006AA59F /* LevelSelectorViewController.swift */; };
 		9AA3298222491A69008ADB9D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA3298122491A69008ADB9D /* SettingsViewController.swift */; };
@@ -75,6 +79,10 @@
 		317C26C3221F5F6A00B4F12A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		317C26CF221F5FF100B4F12A /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		31923F5B2398CE2E00A36DAB /* selected.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = selected.mp3; sourceTree = "<group>"; };
+		31923F5D23992B1200A36DAB /* LevelThreeGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelThreeGame.swift; sourceTree = "<group>"; };
+		31923F5F23992B2300A36DAB /* LevelFourGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelFourGame.swift; sourceTree = "<group>"; };
+		31923F6123992BCE00A36DAB /* LevelThreeTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelThreeTutorial.swift; sourceTree = "<group>"; };
+		31923F6323992BE000A36DAB /* LevelFourTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelFourTutorial.swift; sourceTree = "<group>"; };
 		9A1775A522425AC0005E3DD7 /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		9A2A0A72224E70ED006AA59F /* LevelSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectorViewController.swift; sourceTree = "<group>"; };
 		9AA3298122491A69008ADB9D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -134,14 +142,18 @@
 				317C26A1221F5F6900B4F12A /* AppDelegate.swift */,
 				317A81AF232B49C600DFBCC0 /* LevelOneGame.swift */,
 				317C26A3221F5F6900B4F12A /* LevelTwoGame.swift */,
+				31923F5D23992B1200A36DAB /* LevelThreeGame.swift */,
+				31923F5F23992B2300A36DAB /* LevelFourGame.swift */,
+				311C12EE23279404003C1B74 /* LevelOneTutorial.swift */,
+				3112FDCB228098D200D1915A /* LevelTwoTutorial.swift */,
+				31923F6123992BCE00A36DAB /* LevelThreeTutorial.swift */,
+				31923F6323992BE000A36DAB /* LevelFourTutorial.swift */,
 				310C4B8622541BCB005C0B58 /* IncorrectPopUpViewController.swift */,
 				310C4B8822541C74005C0B58 /* CorrectPopUpViewController.swift */,
 				9A2A0A72224E70ED006AA59F /* LevelSelectorViewController.swift */,
 				311C569B2331E8B0005C1F0C /* TickView.swift */,
 				311C569D2331E8B8005C1F0C /* LineBackgroundView.swift */,
 				317C26CF221F5FF100B4F12A /* Line.swift */,
-				311C12EE23279404003C1B74 /* LevelOneTutorial.swift */,
-				3112FDCB228098D200D1915A /* LevelTwoTutorial.swift */,
 				9A1775A522425AC0005E3DD7 /* StartScreenViewController.swift */,
 				9AA3298122491A69008ADB9D /* SettingsViewController.swift */,
 				317A81B3232B5D5700DFBCC0 /* Assets.xcassets */,
@@ -309,13 +321,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31923F6023992B2300A36DAB /* LevelFourGame.swift in Sources */,
 				311C569E2331E8B8005C1F0C /* LineBackgroundView.swift in Sources */,
 				317C26D0221F5FF100B4F12A /* Line.swift in Sources */,
 				317C26A4221F5F6900B4F12A /* LevelTwoGame.swift in Sources */,
 				311C12EF23279404003C1B74 /* LevelOneTutorial.swift in Sources */,
 				9A2A0A73224E70ED006AA59F /* LevelSelectorViewController.swift in Sources */,
 				317C26A2221F5F6900B4F12A /* AppDelegate.swift in Sources */,
+				31923F6223992BCE00A36DAB /* LevelThreeTutorial.swift in Sources */,
+				31923F6423992BE000A36DAB /* LevelFourTutorial.swift in Sources */,
 				317A81B0232B49C600DFBCC0 /* LevelOneGame.swift in Sources */,
+				31923F5E23992B1200A36DAB /* LevelThreeGame.swift in Sources */,
 				9AA3298222491A69008ADB9D /* SettingsViewController.swift in Sources */,
 				3112FDCC228098D200D1915A /* LevelTwoTutorial.swift in Sources */,
 				9A1775A622425AC0005E3DD7 /* StartScreenViewController.swift in Sources */,

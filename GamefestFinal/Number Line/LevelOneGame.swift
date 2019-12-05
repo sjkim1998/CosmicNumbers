@@ -9,7 +9,6 @@
 import UIKit
 import AVFoundation
 
-//class ViewController: UIViewController {
 class LevelOneGame: UIViewController {
 
     @IBOutlet weak var lineRef: Line!
@@ -22,7 +21,6 @@ class LevelOneGame: UIViewController {
     @IBOutlet weak var five: UIButton!
 
     var desiredNumber=Int.random(in: 0...5)
-    var answerClicked = false
     var player: AVAudioPlayer?
     var accessibleNumbers:[UIView]=[]
     var selectedAnswer = 0
