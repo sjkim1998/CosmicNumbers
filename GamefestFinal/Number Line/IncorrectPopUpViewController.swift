@@ -25,6 +25,10 @@ class IncorrectPopUpViewController: UIViewController {
     var previousThreeDesiredNum:Int=0
     var previousThreeAstronautNum:Int=0
     
+    var previousFour = false
+    var previousFourDesiredNum:Int=0
+    var previousFourAstronautNum:Int=0
+    
     @IBOutlet weak var tryagainhint: UILabel!
     
     override func viewDidLoad() {
@@ -60,6 +64,13 @@ class IncorrectPopUpViewController: UIViewController {
             tryagainhint.text = ""
             self.showAnimate()
         }
+        
+        // If the user is playing level four
+        // no hint will be provided
+        else if (previousFour == true) {
+            tryagainhint.text = ""
+            self.showAnimate()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -83,6 +94,12 @@ class IncorrectPopUpViewController: UIViewController {
             levelVC.desiredNumber=previousThreeDesiredNum
             levelVC.astronautNumber=previousThreeAstronautNum
         }
+        
+        else if (previousFour == true) {
+            let levelVC:LevelFourGame=segue.destination as! LevelFourGame
+            levelVC.desiredNumber=previousFourDesiredNum
+            levelVC.astronautNumber=previousFourAstronautNum
+        }
     }
 
     // Allows the player to go back to previous page
@@ -97,6 +114,10 @@ class IncorrectPopUpViewController: UIViewController {
         
         if (previousThree == true) {
             performSegue(withIdentifier: "tryAgainToLevelThree", sender: self)
+        }
+        
+        if (previousFour == true) {
+            performSegue(withIdentifier: "tryAgainToLevelFour", sender: self)
         }
     }
     

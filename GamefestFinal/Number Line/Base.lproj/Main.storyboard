@@ -530,6 +530,7 @@
                         <segue destination="BYZ-38-t0r" kind="show" identifier="backToLevelTwo" id="UFV-fu-KT4"/>
                         <segue destination="00J-QT-lO2" kind="show" identifier="backToLevelOne" id="Y3n-Si-I4X"/>
                         <segue destination="GeS-h0-5oK" kind="show" identifier="backToLevelThree" id="di4-Dy-hc7"/>
+                        <segue destination="HpZ-v0-WxA" kind="show" identifier="backToLevelFour" id="JNu-aT-A4Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZzV-Pm-dpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -612,6 +613,7 @@
                         <segue destination="BYZ-38-t0r" kind="show" identifier="tryAgainToLevelTwo" id="DCr-hj-1Wt"/>
                         <segue destination="00J-QT-lO2" kind="show" identifier="tryAgainToLevelOne" id="BgU-yG-a7o"/>
                         <segue destination="GeS-h0-5oK" kind="show" identifier="tryAgainToLevelThree" id="rb0-WC-23k"/>
+                        <segue destination="HpZ-v0-WxA" kind="show" identifier="tryAgainToLevelFour" id="WQH-Cj-Qhq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cl5-ow-rbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1375,6 +1377,9 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="submit:" destination="HpZ-v0-WxA" eventType="touchUpInside" id="D2w-1d-bp2"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="astronaut" translatesAutoresizingMaskIntoConstraints="NO" id="rkd-NL-TJY">
                                 <rect key="frame" x="198" y="519" width="101" height="100"/>
@@ -1393,6 +1398,7 @@
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eyD-iE-oKV">
                                 <rect key="frame" x="0.0" y="488" width="1024" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1423,6 +1429,8 @@
                         <outlet property="pickerItem" destination="eyD-iE-oKV" id="1OM-9v-Jf3"/>
                         <outlet property="question" destination="uoM-5a-Boa" id="Sjp-xU-vhX"/>
                         <outlet property="questionNum" destination="aX2-qc-c5g" id="Sle-VB-8L9"/>
+                        <segue destination="Hbl-Vc-ebS" kind="show" identifier="toCongrats" id="VIa-M0-xwV"/>
+                        <segue destination="Lng-4k-13T" kind="show" identifier="toTryAgain" id="RCo-6A-ySW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5fi-g2-Cbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1440,14 +1448,15 @@
         <image name="tryagain" width="600" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="di4-Dy-hc7"/>
+        <segue reference="WQH-Cj-Qhq"/>
+        <segue reference="rb0-WC-23k"/>
         <segue reference="qOF-F9-vxY"/>
         <segue reference="uQI-Yn-X27"/>
         <segue reference="Vmt-Sg-hCl"/>
         <segue reference="Mlf-5l-hd8"/>
         <segue reference="d2X-AF-QJ1"/>
-        <segue reference="wGu-VF-hqd"/>
-        <segue reference="kzi-Gx-tnR"/>
+        <segue reference="RCo-6A-ySW"/>
+        <segue reference="VIa-M0-xwV"/>
         <segue reference="Uzh-xv-myr"/>
         <segue reference="BKW-2W-pRu"/>
         <segue reference="UFV-fu-KT4"/>
