@@ -54,22 +54,18 @@ class LevelOneGame: UIViewController {
         astronaut.frame = CGRect(x: minXOfLine + ((linerefbounds.width-40) / 5 * CGFloat(desiredNumber)),  y: lineRef.center.y, width: astronaut.frame.size.width, height: astronaut.frame.size.height)
     }
     
+    // when the user selects an answer choice, the program automatically deselect the previous button
     @IBAction func buttonPressed(_ sender: Any) {
         guard let button = sender as? UIButton else {
             return
         }
         
-        if(UIAccessibility.isVoiceOverRunning){
-            
-        }
-       // button.isSelected = true
         for answer in answerArray {
             if (answer == button) {
                 answerSelected = true
                 button.backgroundColor = UIColor(red:0.43, green:0.17, blue:0.56, alpha:1.0)
                 button.setTitleColor(UIColor.white, for: .normal)
                 button.accessibilityValue = "Selected"
-                //playSound()
                 if let text = button.titleLabel?.text {
                     selectedAnswer = Int(text) ?? 0
                 }

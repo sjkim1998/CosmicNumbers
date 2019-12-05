@@ -11,6 +11,7 @@ import UIKit
 class CorrectPopUpViewController: UIViewController {
     var parentOneVC:LevelOneGame?=nil
     var parentTwoVC:LevelTwoGame?=nil
+    var parentThreeVC:LevelThreeGame?=nil
     var numLevelsComplete:Int=0
     
     // Directs the player to level selection page
@@ -35,6 +36,13 @@ class CorrectPopUpViewController: UIViewController {
             performSegue(withIdentifier: "backToLevelTwo", sender: self)
             parentTwoVC?.removePopOverView()
         }
+        
+        if((parentThreeVC) != nil)
+        {
+            print("level three correct")
+            performSegue(withIdentifier: "backToLevelThree", sender: self)
+            parentThreeVC?.removePopOverView()
+        }
     }
     
     // Directs the player to the next level of game
@@ -49,6 +57,13 @@ class CorrectPopUpViewController: UIViewController {
         if((parentTwoVC) != nil)
         {
             if let destinationVC = segue.destination as? LevelTwoGame{
+                destinationVC.howManyLevelsAreDone = self.numLevelsComplete + 1
+                destinationVC.previousVC=self
+            }
+        }
+        if((parentThreeVC) != nil)
+        {
+            if let destinationVC = segue.destination as? LevelThreeGame{
                 destinationVC.howManyLevelsAreDone = self.numLevelsComplete + 1
                 destinationVC.previousVC=self
             }
