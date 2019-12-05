@@ -16,6 +16,8 @@ class LevelThreeGame: UIViewController {
     @IBOutlet weak var astronaut: UIImageView!
     @IBOutlet weak var smaller: UIButton!
     @IBOutlet weak var bigger: UIButton!
+    @IBOutlet weak var submitBtn: UIButton!
+    @IBOutlet weak var back: UIButton!
     
     var desiredNumber=Int.random(in: 0...5)
     var astronautNumber=Int.random(in: 0...5)
@@ -31,7 +33,7 @@ class LevelThreeGame: UIViewController {
         
         // update the question label with desired number answer
         isAccessibilityElement = true
-        question.text="Is Astronaut Tommy smaller or bigger than \(desiredNumber)"
+        question.text="Is Astronaut Tommy smaller or bigger than \(desiredNumber)?"
         
         // save the UIbuttons to the array
         answerArray = [smaller, bigger]
@@ -142,5 +144,6 @@ class LevelThreeGame: UIViewController {
             accessibleNumbers.append(label)
             i = i+1
         }
+        self.view.accessibilityElements = [question, lineRef, astronaut, accessibleNumbers, smaller, bigger, submitBtn, back];
     }
 }

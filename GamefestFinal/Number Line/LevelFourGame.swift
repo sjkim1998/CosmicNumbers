@@ -16,6 +16,9 @@ class LevelFourGame: UIViewController {
     @IBOutlet weak var question: UILabel!
     @IBOutlet weak var questionNum: UILabel!
     @IBOutlet weak var pickerItem: UIPickerView!
+    @IBOutlet weak var submitBtn: UIButton!
+    @IBOutlet weak var back: UIButton!
+    @IBOutlet weak var astronautTwo: UIImageView!
     
     var desiredNumber=Int.random(in: 0...5)
     var astronautNumber=Int.random(in: 0...5)
@@ -31,7 +34,7 @@ class LevelFourGame: UIViewController {
         
         // update the question label with desired number answer
         isAccessibilityElement = true
-        question.text="Is Astronaut Tommy greater than, equal to, less than \(desiredNumber)"
+        question.text="Is Astronaut Tommy greater than, equal to, less than \(desiredNumber)?"
         questionNum.text="\(desiredNumber)"
         
         // update the position of the astronaut
@@ -119,6 +122,7 @@ class LevelFourGame: UIViewController {
             accessibleNumbers.append(label)
             i = i+1
         }
+        self.view.accessibilityElements = [question, lineRef, astronaut, accessibleNumbers, astronautTwo, pickerItem, questionNum, submitBtn, back];
     }
 }
 

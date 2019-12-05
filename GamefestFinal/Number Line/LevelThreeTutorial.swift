@@ -12,8 +12,16 @@ import AVFoundation
 class LevelThreeTutorial: UIViewController {
     
     // This is the tutorial page for level three
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var one: UILabel!
+    @IBOutlet weak var two: UILabel!
+    @IBOutlet weak var note: UILabel!
+    @IBOutlet weak var nextBtn: UIButton!
+    @IBOutlet weak var back: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.accessibilityElements = [label, one, two, note, nextBtn, back];
     }
 }

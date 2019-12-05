@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HpZ-v0-WxA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ibz-k2-5jT">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -368,7 +368,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ope-iO-51q" kind="presentation" id="1xc-tK-KMV"/>
+                                    <segue destination="Ope-iO-51q" kind="presentation" id="MF3-H7-BYx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKW-sO-0Zb">
@@ -439,6 +439,12 @@
                         <viewLayoutGuide key="safeArea" id="DNQ-cZ-WJr"/>
                     </view>
                     <connections>
+                        <outlet property="Four" destination="YWr-bJ-wHw" id="KsX-cc-ct0"/>
+                        <outlet property="One" destination="PiC-ly-zNu" id="RZc-6U-JZg"/>
+                        <outlet property="Three" destination="YHu-SN-C7i" id="A5c-MT-Osa"/>
+                        <outlet property="Two" destination="JKW-sO-0Zb" id="kxG-MF-sEB"/>
+                        <outlet property="back" destination="gqT-hC-vPJ" id="6Mi-bT-5OI"/>
+                        <outlet property="label" destination="Wzl-5F-lfX" id="N1I-5r-L8P"/>
                         <segue destination="Ibz-k2-5jT" kind="presentation" identifier="LStoStart" id="n49-uk-T4Q"/>
                     </connections>
                 </viewController>
@@ -483,7 +489,7 @@
                                         </state>
                                         <connections>
                                             <action selector="ExitToStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ABq-ct-MuY"/>
-                                            <action selector="closeButtonTouched:" destination="Hbl-Vc-ebS" eventType="touchUpInside" id="BNE-Hg-Qh8"/>
+                                            <segue destination="NYN-zJ-RB1" kind="presentation" id="27t-41-jNl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Bk-JM-7C8">
@@ -713,6 +719,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="l0D-yb-FgV"/>
                     </view>
+                    <connections>
+                        <outlet property="back" destination="Z2o-De-KAK" id="5eH-DJ-od0"/>
+                        <outlet property="label" destination="Ycu-4d-cBA" id="6Nw-j6-uc0"/>
+                        <outlet property="nextBtn" destination="wOq-Y8-CCl" id="zkk-zH-lqh"/>
+                        <outlet property="note" destination="gFR-iQ-TpK" id="Hwn-NT-pxs"/>
+                        <outlet property="noteTwo" destination="1jV-be-RwH" id="CBo-fQ-aMl"/>
+                        <outlet property="one" destination="IGv-oO-xp0" id="URp-ZL-KdD"/>
+                        <outlet property="two" destination="0J6-Vn-N6q" id="gkJ-z9-dD5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFn-bX-Nhu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -806,6 +821,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oGH-PL-zUb"/>
                     </view>
+                    <connections>
+                        <outlet property="back" destination="vF0-sp-ndC" id="GCU-RK-IpY"/>
+                        <outlet property="label" destination="q8P-Op-Nze" id="aHB-T6-oVZ"/>
+                        <outlet property="nextBtn" destination="Sgg-jI-Ks6" id="xfz-DL-gnr"/>
+                        <outlet property="note" destination="RK2-u7-P3Q" id="coH-NJ-H3D"/>
+                        <outlet property="one" destination="iag-hK-1Bm" id="u24-Qa-mXd"/>
+                        <outlet property="two" destination="LZB-zN-CIw" id="PaC-c9-rfj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fQ0-7J-f2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -833,7 +856,7 @@
                                 <rect key="frame" x="457" y="557" width="110" height="71"/>
                                 <color key="backgroundColor" red="0.42849117520000002" green="0.174444288" blue="0.5652055144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                    <accessibilityTraits key="traits" playsSound="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="71" id="HOU-9x-6ns"/>
@@ -861,7 +884,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laa-7C-ucx">
                                 <rect key="frame" x="30" y="20" width="39" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration" label="Back"/>
+                                <accessibility key="accessibilityConfiguration" label="Back">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <state key="normal" title="X">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -895,6 +920,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zUG-ij-kDg"/>
                     </view>
+                    <connections>
+                        <outlet property="back" destination="laa-7C-ucx" id="dna-lC-aId"/>
+                        <outlet property="label" destination="NTf-x7-X4Z" id="xrj-vo-W8B"/>
+                        <outlet property="nextBtn" destination="RiR-rl-dbY" id="emT-Jn-6Zr"/>
+                        <outlet property="note" destination="Ngi-6S-68k" id="aBA-UQ-FJg"/>
+                        <outlet property="one" destination="GZu-Ap-fan" id="Ve7-4N-oon"/>
+                        <outlet property="two" destination="8xS-he-hop" id="Iqh-Nf-Km7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QRg-wl-0MT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1051,6 +1084,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Astronaut Tommy">
                                     <accessibilityTraits key="traits" none="YES"/>
+                                    <bool key="isElement" value="YES"/>
                                 </accessibility>
                             </imageView>
                         </subviews>
@@ -1078,10 +1112,13 @@
                     </view>
                     <connections>
                         <outlet property="astronaut" destination="bgP-Vs-BZO" id="sOt-wS-lQe"/>
+                        <outlet property="back" destination="kFP-U2-MTZ" id="8TR-EK-lK9"/>
                         <outlet property="five" destination="5jt-ds-EFF" id="jiW-GJ-8E8"/>
                         <outlet property="four" destination="M4x-gE-pUz" id="Pww-11-vpW"/>
                         <outlet property="lineRef" destination="QxU-WG-Y30" id="qiw-yP-RL8"/>
                         <outlet property="one" destination="VhQ-U0-Hix" id="cSt-eQ-nYw"/>
+                        <outlet property="question" destination="nJo-kL-7QG" id="GHa-fJ-E6s"/>
+                        <outlet property="submitBtn" destination="9O1-tQ-v7D" id="oeM-Tm-voC"/>
                         <outlet property="three" destination="pn5-tY-xgX" id="oPE-cW-Ofd"/>
                         <outlet property="two" destination="p8h-Jc-rbl" id="sSU-aS-b6Q"/>
                         <outlet property="zero" destination="FQz-aR-NEw" id="NyI-tw-Ppo"/>
@@ -1181,6 +1218,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GOX-w0-hiX"/>
                     </view>
+                    <connections>
+                        <outlet property="back" destination="ekH-kz-wCB" id="dg5-pQ-Igd"/>
+                        <outlet property="label" destination="8qJ-Aq-Sda" id="f89-5o-CDs"/>
+                        <outlet property="nextBtn" destination="IMy-FU-Ggu" id="IB5-tN-Dyk"/>
+                        <outlet property="note" destination="MUa-fn-aYz" id="red-R6-H2n"/>
+                        <outlet property="one" destination="CvZ-EE-ucv" id="BYd-f5-bfl"/>
+                        <outlet property="two" destination="mhe-bA-hY4" id="8w1-LA-Ikb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DV8-fx-qNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1238,11 +1283,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Astronaut Tommy">
                                     <accessibilityTraits key="traits" none="YES"/>
+                                    <bool key="isElement" value="YES"/>
                                 </accessibility>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8x-MY-eqf">
                                 <rect key="frame" x="179" y="581" width="213" height="72"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.73333333329999995" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="213" id="KoP-uy-dHr"/>
                                 </constraints>
@@ -1257,6 +1306,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzV-H4-9JU">
                                 <rect key="frame" x="627" y="581" width="213" height="72"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.73333333329999995" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="213" id="wVa-OT-KL1"/>
                                 </constraints>
@@ -1306,10 +1358,12 @@
                     </view>
                     <connections>
                         <outlet property="astronaut" destination="2lP-WP-rhW" id="aWl-vP-Drl"/>
+                        <outlet property="back" destination="3Bw-ab-5GT" id="gsm-7a-vl9"/>
                         <outlet property="bigger" destination="fzV-H4-9JU" id="ovw-9P-1lg"/>
                         <outlet property="lineRef" destination="lig-wx-o7p" id="dLC-e9-UeO"/>
                         <outlet property="question" destination="l7B-y6-KDx" id="TR8-r2-c9i"/>
                         <outlet property="smaller" destination="k8x-MY-eqf" id="Ahz-0F-DEQ"/>
+                        <outlet property="submitBtn" destination="Ipg-D8-k66" id="2F1-zI-qY2"/>
                         <segue destination="Hbl-Vc-ebS" kind="show" identifier="toCongrats" id="kzi-Gx-tnR"/>
                         <segue destination="Lng-4k-13T" kind="show" identifier="toTryAgain" id="wGu-VF-hqd"/>
                     </connections>
@@ -1362,6 +1416,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Astronaut Tommy">
                                     <accessibilityTraits key="traits" none="YES"/>
+                                    <bool key="isElement" value="YES"/>
                                 </accessibility>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwZ-d9-dlM">
@@ -1386,6 +1441,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="Astronaut Tommy">
                                     <accessibilityTraits key="traits" none="YES"/>
+                                    <bool key="isElement" value="YES"/>
                                 </accessibility>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aX2-qc-c5g">
@@ -1399,6 +1455,9 @@
                                 <rect key="frame" x="0.0" y="488" width="1024" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1425,10 +1484,13 @@
                     </view>
                     <connections>
                         <outlet property="astronaut" destination="Y5X-aE-dpO" id="ncR-B2-gyJ"/>
+                        <outlet property="astronautTwo" destination="rkd-NL-TJY" id="aOZ-X2-HlD"/>
+                        <outlet property="back" destination="mRd-e1-GJd" id="1KC-Yh-SDM"/>
                         <outlet property="lineRef" destination="5gn-er-F8H" id="okL-aK-xwD"/>
                         <outlet property="pickerItem" destination="eyD-iE-oKV" id="1OM-9v-Jf3"/>
                         <outlet property="question" destination="uoM-5a-Boa" id="Sjp-xU-vhX"/>
                         <outlet property="questionNum" destination="aX2-qc-c5g" id="Sle-VB-8L9"/>
+                        <outlet property="submitBtn" destination="dwZ-d9-dlM" id="rfl-ej-ULO"/>
                         <segue destination="Hbl-Vc-ebS" kind="show" identifier="toCongrats" id="VIa-M0-xwV"/>
                         <segue destination="Lng-4k-13T" kind="show" identifier="toTryAgain" id="RCo-6A-ySW"/>
                     </connections>
@@ -1448,17 +1510,17 @@
         <image name="tryagain" width="600" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WQH-Cj-Qhq"/>
-        <segue reference="rb0-WC-23k"/>
+        <segue reference="JNu-aT-A4Y"/>
+        <segue reference="di4-Dy-hc7"/>
         <segue reference="qOF-F9-vxY"/>
-        <segue reference="uQI-Yn-X27"/>
-        <segue reference="Vmt-Sg-hCl"/>
-        <segue reference="Mlf-5l-hd8"/>
-        <segue reference="d2X-AF-QJ1"/>
+        <segue reference="Y3n-Si-I4X"/>
+        <segue reference="MF3-H7-BYx"/>
+        <segue reference="yLj-Mb-AOO"/>
+        <segue reference="9Ju-uY-OcL"/>
         <segue reference="RCo-6A-ySW"/>
         <segue reference="VIa-M0-xwV"/>
-        <segue reference="Uzh-xv-myr"/>
-        <segue reference="BKW-2W-pRu"/>
+        <segue reference="27t-41-jNl"/>
+        <segue reference="n49-uk-T4Q"/>
         <segue reference="UFV-fu-KT4"/>
     </inferredMetricsTieBreakers>
 </document>

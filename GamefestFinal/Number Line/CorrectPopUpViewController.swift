@@ -16,10 +16,10 @@ class CorrectPopUpViewController: UIViewController {
     var numLevelsComplete:Int=0
     
     // Directs the player to level selection page
-    @IBAction func closeButtonTouched(_ sender: Any) {
-        self.removeAnimate()
-        performSegue(withIdentifier: "ToLevelSelect", sender: self)
-    }
+//    @IBAction func closeButtonTouched(_ sender: Any) {
+//        self.removeAnimate()
+//        performSegue(withIdentifier: "ToLevelSelect", sender: self)
+//    }
     
     // Directs the player to the next level
     @IBAction func nextLevel(_ sender: Any) {

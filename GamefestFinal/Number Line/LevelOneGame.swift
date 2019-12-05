@@ -11,6 +11,7 @@ import AVFoundation
 
 class LevelOneGame: UIViewController {
 
+    @IBOutlet weak var question: UILabel!
     @IBOutlet weak var lineRef: Line!
     @IBOutlet weak var astronaut: UIImageView!
     @IBOutlet weak var zero: UIButton!
@@ -19,7 +20,9 @@ class LevelOneGame: UIViewController {
     @IBOutlet weak var three: UIButton!
     @IBOutlet weak var four: UIButton!
     @IBOutlet weak var five: UIButton!
-
+    @IBOutlet weak var submitBtn: UIButton!
+    @IBOutlet weak var back: UIButton!
+    
     var desiredNumber=Int.random(in: 0...5)
     var player: AVAudioPlayer?
     var accessibleNumbers:[UIView]=[]
@@ -37,17 +40,6 @@ class LevelOneGame: UIViewController {
         
         // Make the screen accessible, and specify the question with a randomly chosen number from 0-5
         isAccessibilityElement = true
-
-        // If the voiceover accessible function isn't enabled, read out the question using audio kit
-//        if(!UIAccessibility.isVoiceOverRunning){
-//            let utterance = AVSpeechUtterance(string: "Where is Astronaut Tommy at?")
-//            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-//            utterance.rate = 0.5
-//            utterance.volume=5
-//
-//            let synthesizer = AVSpeechSynthesizer()
-//            synthesizer.speak(utterance)
-//        }
         
         let linerefbounds:CGRect=lineRef.bounds
         var minXOfLine = lineRef.center.x-(linerefbounds.width/2) - 30
@@ -108,6 +100,7 @@ class LevelOneGame: UIViewController {
             accessibleNumbers.append(label)
             i = i+1
         }
+        self.view.accessibilityElements = [question, lineRef, astronaut, accessibleNumbers, zero, one, two, three, four, five, submitBtn, back];
     }
     
     
