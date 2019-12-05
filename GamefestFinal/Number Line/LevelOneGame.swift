@@ -61,23 +61,41 @@ class LevelOneGame: UIViewController {
             return
         }
         
-        button.isSelected = true
-        button.backgroundColor = UIColor(red:0.43, green:0.17, blue:0.56, alpha:1.0)
-        button.setTitleColor(UIColor.white, for: .normal)
-        button.adjustsImageWhenHighlighted = false
-        UIAccessibility.post(notification: .announcement, argument: "Selected")
-//        playSound()
-        if let text = button.titleLabel?.text {
-            selectedAnswer = Int(text) ?? 0
+        if(UIAccessibility.isVoiceOverRunning){
+            
         }
-        
+       // button.isSelected = true
         for answer in answerArray {
-            if answer.isSelected && answer !== button {
-                answer.isSelected = false
+            if (answer == button) {
+                answerSelected = true
+                button.backgroundColor = UIColor(red:0.43, green:0.17, blue:0.56, alpha:1.0)
+                button.setTitleColor(UIColor.white, for: .normal)
+                button.accessibilityValue = "Selected"
+                //playSound()
+                if let text = button.titleLabel?.text {
+                    selectedAnswer = Int(text) ?? 0
+                }
+            }
+            else {
+                answerSelected = false
                 answer.backgroundColor = UIColor(red:0.90, green:0.73, blue:0.17, alpha:1.0)
                 answer.setTitleColor(UIColor.black, for: .normal)
+                answer.accessibilityValue = ""
             }
         }
+        
+//        for answer in answerArray {
+//            if answerSelected && answer !== button {
+//                answerSelected = false
+//                answer.backgroundColor = UIColor(red:0.90, green:0.73, blue:0.17, alpha:1.0)
+//                answer.setTitleColor(UIColor.black, for: .normal)
+//            }
+//            if answer.isSelected && answer !== button {
+//                answer.isSelected = false
+//                answer.backgroundColor = UIColor(red:0.90, green:0.73, blue:0.17, alpha:1.0)
+//                answer.setTitleColor(UIColor.black, for: .normal)
+//            }
+        //}
         
         print(selectedAnswer)
         
@@ -129,7 +147,7 @@ class LevelOneGame: UIViewController {
 
             guard let player = player else { return }
 
-            player.setVolume(90, fadeDuration: 0)
+            player.setVolume(20, fadeDuration: 0)
             player.play()
 
         } catch let error {
