@@ -23,7 +23,7 @@ class LevelFourGame: UIViewController {
     var desiredNumber=Int.random(in: 0...5)
     var astronautNumber=Int.random(in: 0...5)
     var accessibleNumbers:[UIView]=[]
-    var selectedAnswer = ""
+    var selectedAnswer = "Greater than"
     var howManyLevelsAreDone:Int=0
     var previousVC:UIViewController?=nil
     var answerArray: [UIButton]=[]
@@ -34,7 +34,7 @@ class LevelFourGame: UIViewController {
         
         // update the question label with desired number answer
         isAccessibilityElement = true
-        question.text="Is Astronaut Tommy greater than, equal to, less than \(desiredNumber)?"
+        question.text="Is Astronaut Tommy greater than, equal to, or less than \(desiredNumber)?"
         questionNum.text="\(desiredNumber)"
         
         // update the position of the astronaut
