@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ibz-k2-5jT">
-    <device id="ipad9_7" orientation="landscape">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ibz-k2-5jT">
+    <device id="ipad10_2" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,15 +13,15 @@
             <objects>
                 <viewController storyboardIdentifier="levelVC" title="Level Two Game" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LevelTwoGame" customModule="Number_Line" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stars" translatesAutoresizingMaskIntoConstraints="NO" id="xRe-ki-QhO">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WXg-th-nYf" userLabel="GrayArea">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="127"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1080" height="127"/>
                                 <color key="backgroundColor" red="0.42849117520000002" green="0.174444288" blue="0.5652055144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Found it!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3A-TO-XBI">
@@ -34,13 +32,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J5b-kt-Qlo" customClass="Line" customModule="Number_Line" customModuleProvider="target">
-                                <rect key="frame" x="79" y="319" width="866" height="150"/>
+                                <rect key="frame" x="79" y="325" width="922" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="J5b-kt-Qlo" secondAttribute="height" multiplier="433:75" id="6jl-V4-TUs"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag Astronaut Tommy to tick and click submit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ay7-S2-6Pc">
-                                <rect key="frame" x="46.5" y="159" width="931" height="59.5"/>
+                                <rect key="frame" x="46.5" y="159" width="987" height="63.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ay7-S2-6Pc" secondAttribute="height" multiplier="619:42" constant="54.083333333333371" id="w6h-oc-pai"/>
                                 </constraints>
@@ -73,11 +71,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rt8-Dx-Zq0" kind="presentation" id="d2X-AF-QJ1"/>
+                                    <segue destination="rt8-Dx-Zq0" kind="presentation" modalPresentationStyle="fullScreen" id="d2X-AF-QJ1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbw-Gh-TIu">
-                                <rect key="frame" x="862" y="694" width="142" height="54"/>
+                                <rect key="frame" x="918" y="736" width="142" height="54"/>
                                 <color key="backgroundColor" red="0.42849117520000002" green="0.174444288" blue="0.5652055144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
@@ -129,16 +127,17 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="itt-MB-DRB"/>
                     <connections>
                         <outlet property="astronaut" destination="aBP-MU-YGn" id="wzf-YD-QsD"/>
                         <outlet property="astronautPlaceLabel" destination="ay7-S2-6Pc" id="qiI-D4-EyO"/>
                         <outlet property="back" destination="9OE-ol-bdn" id="7Jw-kV-GRL"/>
                         <outlet property="lineRef" destination="J5b-kt-Qlo" id="Fmh-WN-nm4"/>
                         <outlet property="submitBtn" destination="Gbw-Gh-TIu" id="9ce-T7-QWJ"/>
-                        <segue destination="Ibz-k2-5jT" kind="presentation" identifier="ExitToStartMenu" id="BKW-2W-pRu"/>
-                        <segue destination="NYN-zJ-RB1" kind="presentation" identifier="Submit" id="LWI-Tf-gGM"/>
-                        <segue destination="Hbl-Vc-ebS" kind="show" identifier="toCongrats" id="K1e-qQ-yTv"/>
-                        <segue destination="Lng-4k-13T" kind="show" identifier="toTryAgain" id="i6z-KA-Gtd"/>
+                        <segue destination="Ibz-k2-5jT" kind="presentation" identifier="ExitToStartMenu" modalPresentationStyle="fullScreen" id="BKW-2W-pRu"/>
+                        <segue destination="NYN-zJ-RB1" kind="presentation" identifier="Submit" modalPresentationStyle="fullScreen" id="LWI-Tf-gGM"/>
+                        <segue destination="Hbl-Vc-ebS" kind="presentation" identifier="toCongrats" modalPresentationStyle="fullScreen" id="K1e-qQ-yTv"/>
+                        <segue destination="Lng-4k-13T" kind="presentation" identifier="toTryAgain" modalPresentationStyle="fullScreen" id="i6z-KA-Gtd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -148,18 +147,18 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-212.109375" y="-996.09375"/>
+            <point key="canvasLocation" x="-212.22222222222223" y="-996.29629629629619"/>
         </scene>
         <!--Start Screen View Controller-->
         <scene sceneID="2Pp-8X-SGq">
             <objects>
                 <viewController id="Ibz-k2-5jT" customClass="StartScreenViewController" customModule="Number_Line" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LmE-GF-WLi">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="startbackground" translatesAutoresizingMaskIntoConstraints="NO" id="tMC-0N-UXT">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="0yU-ow-z3y">
@@ -171,7 +170,7 @@
                                 </accessibility>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3D-KT-mJS">
-                                <rect key="frame" x="-44" y="19.5" width="349" height="78"/>
+                                <rect key="frame" x="-44" y="61.5" width="405" height="78"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
@@ -185,7 +184,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PzW-bT-2iH">
-                                <rect key="frame" x="645" y="20.5" width="478" height="78"/>
+                                <rect key="frame" x="645" y="62.5" width="534" height="78"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
@@ -238,24 +237,24 @@
                     </view>
                     <connections>
                         <outlet property="startBtn" destination="h3D-KT-mJS" id="2qU-oU-cIc"/>
-                        <segue destination="zEL-eY-Evt" kind="presentation" identifier="StartToSettings" id="41z-Tn-ZrG"/>
-                        <segue destination="NYN-zJ-RB1" kind="presentation" identifier="LevelSelect" id="czd-BC-cJT"/>
+                        <segue destination="zEL-eY-Evt" kind="presentation" identifier="StartToSettings" modalPresentationStyle="fullScreen" id="41z-Tn-ZrG"/>
+                        <segue destination="NYN-zJ-RB1" kind="presentation" identifier="LevelSelect" modalPresentationStyle="fullScreen" id="czd-BC-cJT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jWi-UQ-ixR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2297" y="-996"/>
+            <point key="canvasLocation" x="-2297.2222222222222" y="-996.29629629629619"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="K32-rP-9c4">
             <objects>
                 <viewController id="zEL-eY-Evt" customClass="SettingsViewController" customModule="Number_Line" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JWD-b8-9Mn">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stars" translatesAutoresizingMaskIntoConstraints="NO" id="JL4-YR-mjV">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
@@ -300,7 +299,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ibz-k2-5jT" kind="presentation" id="2qK-I3-zP5"/>
+                                    <segue destination="Ibz-k2-5jT" kind="presentation" modalPresentationStyle="fullScreen" id="2qK-I3-zP5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -315,27 +314,27 @@
                         <viewLayoutGuide key="safeArea" id="MpB-kO-NBw"/>
                     </view>
                     <connections>
-                        <segue destination="Ibz-k2-5jT" kind="presentation" identifier="SettingsExit" id="M5B-Lh-f1N"/>
+                        <segue destination="Ibz-k2-5jT" kind="presentation" identifier="SettingsExit" modalPresentationStyle="fullScreen" id="M5B-Lh-f1N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="23n-La-SuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2297.4609375" y="-282.03125"/>
+            <point key="canvasLocation" x="-2297.7777777777778" y="-282.22222222222223"/>
         </scene>
         <!--Level Selector View Controller-->
         <scene sceneID="uhu-v6-f6K">
             <objects>
                 <viewController id="NYN-zJ-RB1" customClass="LevelSelectorViewController" customModule="Number_Line" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bEc-Ed-wXN">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="levelselector" translatesAutoresizingMaskIntoConstraints="NO" id="OEZ-x6-h8q">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wzl-5F-lfX">
-                                <rect key="frame" x="259" y="31" width="507" height="72"/>
+                                <rect key="frame" x="259" y="11" width="507" height="72"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" playsSound="YES" staticText="YES"/>
                                 </accessibility>
@@ -344,7 +343,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqT-hC-vPJ">
-                                <rect key="frame" x="20" y="25" width="102" height="84"/>
+                                <rect key="frame" x="20" y="5" width="102" height="84"/>
                                 <accessibility key="accessibilityConfiguration" label="Back">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
@@ -357,7 +356,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PiC-ly-zNu">
-                                <rect key="frame" x="173" y="265" width="186" height="60"/>
+                                <rect key="frame" x="173" y="245" width="242" height="60"/>
                                 <color key="backgroundColor" red="0.42849117520000002" green="0.174444288" blue="0.5652055144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
@@ -368,11 +367,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ope-iO-51q" kind="presentation" id="MF3-H7-BYx"/>
+                                    <segue destination="Ope-iO-51q" kind="presentation" modalPresentationStyle="fullScreen" id="MF3-H7-BYx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKW-sO-0Zb">
-                                <rect key="frame" x="667" y="265" width="186" height="60"/>
+                                <rect key="frame" x="693.5" y="245" width="133" height="60"/>
                                 <color key="backgroundColor" red="0.42849117520000002" green="0.174444288" blue="0.5652055144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
@@ -382,11 +381,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rt8-Dx-Zq0" kind="presentation" id="9Ju-uY-OcL"/>
+                                    <segue destination="rt8-Dx-Zq0" kind="presentation" modalPresentationStyle="fullScreen" id="9Ju-uY-OcL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHu-SN-C7i">
-                                <rect key="frame" x="173" y="410" width="186" height="60"/>
+                                <rect key="frame" x="173" y="390" width="242" height="60"/>
                                 <color key="backgroundColor" red="0.42849117520000002" green="0.174444288" blue="0.5652055144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
@@ -400,7 +399,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWr-bJ-wHw">
-                                <rect key="frame" x="667" y="410" width="186" height="60"/>
+                                <rect key="frame" x="693.5" y="390" width="133" height="60"/>
                                 <color key="backgroundColor" red="0.42849117520000002" green="0.174444288" blue="0.5652055144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
@@ -445,30 +444,30 @@
                         <outlet property="Two" destination="JKW-sO-0Zb" id="kxG-MF-sEB"/>
                         <outlet property="back" destination="gqT-hC-vPJ" id="6Mi-bT-5OI"/>
                         <outlet property="label" destination="Wzl-5F-lfX" id="N1I-5r-L8P"/>
-                        <segue destination="Ibz-k2-5jT" kind="presentation" identifier="LStoStart" id="n49-uk-T4Q"/>
+                        <segue destination="Ibz-k2-5jT" kind="presentation" identifier="LStoStart" modalPresentationStyle="fullScreen" id="n49-uk-T4Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="60S-aF-6Av" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1598.4375" y="-996.09375"/>
+            <point key="canvasLocation" x="-1598.8888888888889" y="-996.29629629629619"/>
         </scene>
         <!--Correct Pop Up View Controller-->
         <scene sceneID="mRp-MZ-18s">
             <objects>
                 <viewController storyboardIdentifier="popUpWindow1" title="Correct Pop Up View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hbl-Vc-ebS" customClass="CorrectPopUpViewController" customModule="Number_Line" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bcV-Gq-sjs">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="levelselector" translatesAutoresizingMaskIntoConstraints="NO" id="JEg-D4-q5v">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWX-FH-9iW">
-                                <rect key="frame" x="326" y="254" width="372" height="260"/>
+                                <rect key="frame" x="326" y="234" width="428" height="342"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greatjob" translatesAutoresizingMaskIntoConstraints="NO" id="hg4-Ue-tyo">
-                                        <rect key="frame" x="-14" y="-13" width="395" height="201"/>
+                                        <rect key="frame" x="-14" y="69" width="451" height="201"/>
                                         <accessibility key="accessibilityConfiguration" label="Great Job">
                                             <accessibilityTraits key="traits" none="YES"/>
                                             <bool key="isElement" value="YES"/>
@@ -477,8 +476,8 @@
                                             <constraint firstAttribute="height" constant="201" id="Wpg-PW-JLv"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhv-62-Mgw">
-                                        <rect key="frame" x="-9" y="196" width="113" height="42"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhv-62-Mgw">
+                                        <rect key="frame" x="-9" y="278" width="73" height="42"/>
                                         <color key="backgroundColor" red="0.42849117520000002" green="0.174444288" blue="0.5652055144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" none="YES"/>
@@ -489,11 +488,11 @@
                                         </state>
                                         <connections>
                                             <action selector="ExitToStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ABq-ct-MuY"/>
-                                            <segue destination="NYN-zJ-RB1" kind="presentation" id="27t-41-jNl"/>
+                                            <segue destination="NYN-zJ-RB1" kind="presentation" modalPresentationStyle="fullScreen" id="27t-41-jNl"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Bk-JM-7C8">
-                                        <rect key="frame" x="268" y="194" width="113" height="46"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Bk-JM-7C8">
+                                        <rect key="frame" x="377" y="276" width="60" height="46"/>
                                         <color key="backgroundColor" red="0.42849117520000002" green="0.174444288" blue="0.5652055144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" none="YES"/>
@@ -532,35 +531,36 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pdj-6x-Fwt"/>
                     </view>
+                    <navigationItem key="navigationItem" id="AQv-X4-flU"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="backToLevelTwo" id="UFV-fu-KT4"/>
-                        <segue destination="00J-QT-lO2" kind="show" identifier="backToLevelOne" id="Y3n-Si-I4X"/>
-                        <segue destination="GeS-h0-5oK" kind="show" identifier="backToLevelThree" id="di4-Dy-hc7"/>
-                        <segue destination="HpZ-v0-WxA" kind="show" identifier="backToLevelFour" id="JNu-aT-A4Y"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="backToLevelTwo" modalPresentationStyle="fullScreen" id="UFV-fu-KT4"/>
+                        <segue destination="00J-QT-lO2" kind="presentation" identifier="backToLevelOne" modalPresentationStyle="fullScreen" id="Y3n-Si-I4X"/>
+                        <segue destination="GeS-h0-5oK" kind="presentation" identifier="backToLevelThree" modalPresentationStyle="fullScreen" id="di4-Dy-hc7"/>
+                        <segue destination="HpZ-v0-WxA" kind="presentation" identifier="backToLevelFour" modalPresentationStyle="fullScreen" id="JNu-aT-A4Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZzV-Pm-dpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="cEY-xk-tQr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="484.57031249999994" y="-996.09375"/>
+            <point key="canvasLocation" x="484.44444444444446" y="-996.29629629629619"/>
         </scene>
         <!--Incorrect Pop Up View Controller-->
         <scene sceneID="VaF-Nq-Qic">
             <objects>
                 <viewController storyboardIdentifier="popUpWindow2" title="Incorrect Pop Up View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Lng-4k-13T" customClass="IncorrectPopUpViewController" customModule="Number_Line" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ESk-uJ-tDC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="levelselector" translatesAutoresizingMaskIntoConstraints="NO" id="3lN-k7-EvR">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rEI-VH-SOw">
-                                <rect key="frame" x="326" y="254" width="372" height="260"/>
+                                <rect key="frame" x="326" y="234" width="428" height="342"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tryagain" translatesAutoresizingMaskIntoConstraints="NO" id="RCo-yX-zn6">
-                                        <rect key="frame" x="0.0" y="0.0" width="372" height="184"/>
+                                        <rect key="frame" x="0.0" y="82" width="428" height="184"/>
                                         <accessibility key="accessibilityConfiguration" label="Try Again">
                                             <accessibilityTraits key="traits" none="YES"/>
                                             <bool key="isElement" value="YES"/>
@@ -570,13 +570,13 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You were on number x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0l-2g-5Uh">
-                                        <rect key="frame" x="90.5" y="140" width="191" height="24"/>
+                                        <rect key="frame" x="118.5" y="222" width="191" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AyW-aa-ujZ">
-                                        <rect key="frame" x="133" y="192" width="107" height="42"/>
+                                        <rect key="frame" x="133" y="274" width="163" height="42"/>
                                         <color key="backgroundColor" red="0.42849117520000002" green="0.174444288" blue="0.5652055144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" none="YES"/>
@@ -614,32 +614,33 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V61-oP-VIB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="CVP-AI-gLD"/>
                     <connections>
                         <outlet property="tryagainhint" destination="g0l-2g-5Uh" id="P2E-Fb-dEd"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="tryAgainToLevelTwo" id="DCr-hj-1Wt"/>
-                        <segue destination="00J-QT-lO2" kind="show" identifier="tryAgainToLevelOne" id="BgU-yG-a7o"/>
-                        <segue destination="GeS-h0-5oK" kind="show" identifier="tryAgainToLevelThree" id="rb0-WC-23k"/>
-                        <segue destination="HpZ-v0-WxA" kind="show" identifier="tryAgainToLevelFour" id="WQH-Cj-Qhq"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="tryAgainToLevelTwo" modalPresentationStyle="fullScreen" id="DCr-hj-1Wt"/>
+                        <segue destination="00J-QT-lO2" kind="presentation" identifier="tryAgainToLevelOne" modalPresentationStyle="fullScreen" id="BgU-yG-a7o"/>
+                        <segue destination="GeS-h0-5oK" kind="presentation" identifier="tryAgainToLevelThree" modalPresentationStyle="fullScreen" id="rb0-WC-23k"/>
+                        <segue destination="HpZ-v0-WxA" kind="presentation" identifier="tryAgainToLevelFour" modalPresentationStyle="fullScreen" id="WQH-Cj-Qhq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cl5-ow-rbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1170" y="-996"/>
+            <point key="canvasLocation" x="1170" y="-996.29629629629619"/>
         </scene>
         <!--Level Two Tutorial-->
         <scene sceneID="b4i-WL-2Pn">
             <objects>
                 <viewController title="Level Two Tutorial" id="rt8-Dx-Zq0" customClass="LevelTwoTutorial" customModule="Number_Line" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HRX-qP-cXF">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stars" translatesAutoresizingMaskIntoConstraints="NO" id="dEJ-jl-Jj1">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level Two Tutorial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycu-4d-cBA">
-                                <rect key="frame" x="326" y="35" width="372" height="54"/>
+                                <rect key="frame" x="354" y="15" width="372" height="54"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -658,29 +659,29 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="j8u-LN-fhE"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="j8u-LN-fhE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1: Find Astronaut Tommy on the top left corner of the screen. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGv-oO-xp0">
-                                <rect key="frame" x="119" y="177" width="786.5" height="33.5"/>
+                                <rect key="frame" x="147" y="177" width="786.5" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: Place Astronaut Tommy on the line itself, not the number." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFR-iQ-TpK">
-                                <rect key="frame" x="137.5" y="345" width="749" height="33.5"/>
+                                <rect key="frame" x="165.5" y="345" width="749" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 2: Slowly drag Astronaut Tommy to the specified place on the number line." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0J6-Vn-N6q">
-                                <rect key="frame" x="39" y="260" width="946" height="33.5"/>
+                                <rect key="frame" x="67" y="260" width="946" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2o-De-KAK">
-                                <rect key="frame" x="20" y="20" width="39" height="84"/>
+                                <rect key="frame" x="76" y="0.0" width="39" height="84"/>
                                 <accessibility key="accessibilityConfiguration" label="Back">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
@@ -689,11 +690,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NYN-zJ-RB1" kind="presentation" id="eCQ-Ig-mMe"/>
+                                    <segue destination="NYN-zJ-RB1" kind="presentation" modalPresentationStyle="fullScreen" id="eCQ-Ig-mMe"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: The number line starts at 0 instead of 1." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jV-be-RwH">
-                                <rect key="frame" x="241.5" y="430" width="541.5" height="33.5"/>
+                                <rect key="frame" x="269" y="430" width="542" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -731,39 +732,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFn-bX-Nhu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-899.41406249999989" y="-996.09375"/>
+            <point key="canvasLocation" x="-899.44444444444446" y="-996.29629629629619"/>
         </scene>
         <!--Level Three Tutorial-->
         <scene sceneID="XqX-HS-2JS">
             <objects>
                 <viewController id="k4Q-dr-Be0" customClass="LevelThreeTutorial" customModule="Number_Line" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hsH-83-TYz">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars" translatesAutoresizingMaskIntoConstraints="NO" id="KGU-OF-yqc">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1: Determine what is the number that Astronaut Tommy is at" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iag-hK-1Bm">
-                                <rect key="frame" x="98" y="162" width="828" height="36"/>
+                                <rect key="frame" x="126" y="183" width="828" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 2: Compare that number with the number in the question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZB-zN-CIw">
-                                <rect key="frame" x="117" y="270" width="790" height="36"/>
+                                <rect key="frame" x="145" y="291" width="790" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level Three Tutorial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8P-Op-Nze">
-                                <rect key="frame" x="309" y="20" width="406" height="54"/>
+                                <rect key="frame" x="337" y="0.0" width="406" height="54"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vF0-sp-ndC">
-                                <rect key="frame" x="20" y="20" width="39" height="84"/>
+                                <rect key="frame" x="20" y="0.0" width="39" height="84"/>
                                 <accessibility key="accessibilityConfiguration" label="Back">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
@@ -772,11 +773,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NYN-zJ-RB1" kind="presentation" id="dX5-pL-cTg"/>
+                                    <segue destination="NYN-zJ-RB1" kind="presentation" modalPresentationStyle="fullScreen" id="dX5-pL-cTg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgg-jI-Ks6">
-                                <rect key="frame" x="457" y="580" width="110" height="71"/>
+                                <rect key="frame" x="457" y="622" width="166" height="71"/>
                                 <color key="backgroundColor" red="0.42849117520000002" green="0.174444288" blue="0.5652055144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" playsSound="YES"/>
@@ -789,11 +790,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GeS-h0-5oK" kind="presentation" id="FGA-ri-NDm"/>
+                                    <segue destination="GeS-h0-5oK" kind="presentation" modalPresentationStyle="fullScreen" id="FGA-ri-NDm"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: The number line starts at 0 instead of 1." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RK2-u7-P3Q">
-                                <rect key="frame" x="222" y="366" width="580" height="36"/>
+                                <rect key="frame" x="250" y="387" width="580" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -839,21 +840,21 @@
             <objects>
                 <viewController title="Level One Tutorial" id="Ope-iO-51q" customClass="LevelOneTutorial" customModule="Number_Line" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gef-4K-kpm">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stars" translatesAutoresizingMaskIntoConstraints="NO" id="ZjG-y0-nWE">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level One Tutorial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTf-x7-X4Z">
-                                <rect key="frame" x="326.5" y="46" width="371" height="54"/>
+                                <rect key="frame" x="354.5" y="26" width="371" height="54"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiR-rl-dbY">
-                                <rect key="frame" x="457" y="557" width="110" height="71"/>
+                                <rect key="frame" x="457" y="599" width="166" height="71"/>
                                 <color key="backgroundColor" red="0.42849117520000002" green="0.174444288" blue="0.5652055144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" playsSound="YES"/>
@@ -866,11 +867,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="00J-QT-lO2" kind="presentation" id="uQI-Yn-X27"/>
+                                    <segue destination="00J-QT-lO2" kind="presentation" modalPresentationStyle="fullScreen" id="uQI-Yn-X27"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: The number line starts at 0 instead of 1." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngi-6S-68k">
-                                <rect key="frame" x="222" y="366" width="580" height="36"/>
+                                <rect key="frame" x="250" y="366" width="580" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -886,17 +887,17 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NYN-zJ-RB1" kind="presentation" id="mp5-z6-SKw"/>
+                                    <segue destination="NYN-zJ-RB1" kind="presentation" modalPresentationStyle="fullScreen" id="mp5-z6-SKw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1: Determine what is the number that Astronaut Tommy is at." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZu-Ap-fan">
-                                <rect key="frame" x="94" y="168" width="836" height="36"/>
+                                <rect key="frame" x="150.5" y="168" width="835.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 2: Select your answer from the bottom of the screen." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xS-he-hop">
-                                <rect key="frame" x="144" y="269" width="736" height="36"/>
+                                <rect key="frame" x="144" y="269" width="792" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -931,18 +932,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QRg-wl-0MT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-899" y="-1680"/>
+            <point key="canvasLocation" x="-899.44444444444446" y="-1680"/>
         </scene>
         <!--Level One Game-->
         <scene sceneID="Tni-wU-kgY">
             <objects>
                 <viewController title="Level One Game" id="00J-QT-lO2" customClass="LevelOneGame" customModule="Number_Line" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZbF-97-H3Q">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="stars" translatesAutoresizingMaskIntoConstraints="NO" id="bB1-Gf-lqi">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                             </imageView>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QxU-WG-Y30" customClass="Line" customModule="Number_Line" customModuleProvider="target">
                                 <rect key="frame" x="79" y="248" width="866" height="150"/>
@@ -951,7 +952,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where is Astronaut Tommy at?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJo-kL-7QG">
-                                <rect key="frame" x="47" y="37" width="930" height="60"/>
+                                <rect key="frame" x="47" y="17" width="986" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nJo-kL-7QG" secondAttribute="height" multiplier="619:42" constant="45.714285714285779" id="1au-6j-E62"/>
                                 </constraints>
@@ -969,11 +970,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ope-iO-51q" kind="presentation" id="Vmt-Sg-hCl"/>
+                                    <segue destination="Ope-iO-51q" kind="presentation" modalPresentationStyle="fullScreen" id="Vmt-Sg-hCl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9O1-tQ-v7D">
-                                <rect key="frame" x="862" y="694" width="142" height="54"/>
+                                <rect key="frame" x="918" y="736" width="142" height="54"/>
                                 <color key="backgroundColor" red="0.42745098039215684" green="0.17254901960784313" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
@@ -1110,6 +1111,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GX7-wk-WoB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="jA4-oR-2mc"/>
                     <connections>
                         <outlet property="astronaut" destination="bgP-Vs-BZO" id="sOt-wS-lQe"/>
                         <outlet property="back" destination="kFP-U2-MTZ" id="8TR-EK-lK9"/>
@@ -1122,45 +1124,45 @@
                         <outlet property="three" destination="pn5-tY-xgX" id="oPE-cW-Ofd"/>
                         <outlet property="two" destination="p8h-Jc-rbl" id="sSU-aS-b6Q"/>
                         <outlet property="zero" destination="FQz-aR-NEw" id="NyI-tw-Ppo"/>
-                        <segue destination="Hbl-Vc-ebS" kind="show" identifier="toCongrats" id="OhJ-Ye-zOG"/>
-                        <segue destination="Lng-4k-13T" kind="show" identifier="toTryAgain" id="aeP-TH-NSU"/>
+                        <segue destination="Hbl-Vc-ebS" kind="presentation" identifier="toCongrats" modalPresentationStyle="fullScreen" id="OhJ-Ye-zOG"/>
+                        <segue destination="Lng-4k-13T" kind="presentation" identifier="toTryAgain" modalPresentationStyle="fullScreen" id="aeP-TH-NSU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIK-gK-5yk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-212.109375" y="-1680.46875"/>
+            <point key="canvasLocation" x="-212.22222222222223" y="-1680.7407407407406"/>
         </scene>
         <!--Level Four Tutorial-->
         <scene sceneID="20t-N2-jpp">
             <objects>
                 <viewController id="KGi-3L-dde" customClass="LevelFourTutorial" customModule="Number_Line" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MQN-sC-2My">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars" translatesAutoresizingMaskIntoConstraints="NO" id="z3L-8G-6t8">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1: Determine what is the number that Astronaut Tommy is at" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvZ-EE-ucv">
-                                <rect key="frame" x="98" y="162" width="828" height="36"/>
+                                <rect key="frame" x="126" y="183" width="828" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 2: Compare that number with the number in the question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhe-bA-hY4">
-                                <rect key="frame" x="117" y="270" width="790" height="36"/>
+                                <rect key="frame" x="145" y="291" width="790" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level Four Tutorial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qJ-Aq-Sda">
-                                <rect key="frame" x="322.5" y="20" width="379" height="54"/>
+                                <rect key="frame" x="350.5" y="0.0" width="379" height="54"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekH-kz-wCB">
-                                <rect key="frame" x="20" y="20" width="39" height="84"/>
+                                <rect key="frame" x="20" y="0.0" width="39" height="84"/>
                                 <accessibility key="accessibilityConfiguration" label="Back">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
@@ -1169,11 +1171,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NYN-zJ-RB1" kind="presentation" id="Uzh-xv-myr"/>
+                                    <segue destination="NYN-zJ-RB1" kind="presentation" modalPresentationStyle="fullScreen" id="Uzh-xv-myr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMy-FU-Ggu">
-                                <rect key="frame" x="457" y="580" width="110" height="71"/>
+                                <rect key="frame" x="457" y="622" width="166" height="71"/>
                                 <color key="backgroundColor" red="0.42849117520000002" green="0.174444288" blue="0.5652055144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" playsSound="YES"/>
@@ -1186,11 +1188,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="HpZ-v0-WxA" kind="presentation" id="e9o-iq-weE"/>
+                                    <segue destination="HpZ-v0-WxA" kind="presentation" modalPresentationStyle="fullScreen" id="e9o-iq-weE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: The number line starts at 0 instead of 1." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUa-fn-aYz">
-                                <rect key="frame" x="222" y="366" width="580" height="36"/>
+                                <rect key="frame" x="250" y="387" width="580" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1236,14 +1238,14 @@
             <objects>
                 <viewController title="Level Three Game" id="GeS-h0-5oK" customClass="LevelThreeGame" customModule="Number_Line" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bm4-re-UvS">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="stars" translatesAutoresizingMaskIntoConstraints="NO" id="eUM-pF-QHP">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lig-wx-o7p" customClass="Line" customModule="Number_Line" customModuleProvider="target">
-                                <rect key="frame" x="79" y="248" width="866" height="150"/>
+                                <rect key="frame" x="79" y="264" width="922" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lig-wx-o7p" secondAttribute="height" multiplier="433:75" id="e1n-xb-RiC"/>
                                 </constraints>
@@ -1258,11 +1260,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="k4Q-dr-Be0" kind="presentation" id="Mlf-5l-hd8"/>
+                                    <segue destination="k4Q-dr-Be0" kind="presentation" modalPresentationStyle="fullScreen" id="Mlf-5l-hd8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipg-D8-k66">
-                                <rect key="frame" x="862" y="694" width="142" height="54"/>
+                                <rect key="frame" x="918" y="736" width="142" height="54"/>
                                 <color key="backgroundColor" red="0.42745098040000001" green="0.17254901959999999" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
@@ -1287,7 +1289,7 @@
                                 </accessibility>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8x-MY-eqf">
-                                <rect key="frame" x="179" y="581" width="213" height="72"/>
+                                <rect key="frame" x="179" y="623" width="213" height="72"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.73333333329999995" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
@@ -1304,7 +1306,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzV-H4-9JU">
-                                <rect key="frame" x="627" y="581" width="213" height="72"/>
+                                <rect key="frame" x="683" y="623" width="213" height="72"/>
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.73333333329999995" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
@@ -1356,6 +1358,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XkF-lH-qBn"/>
                     </view>
+                    <navigationItem key="navigationItem" id="i6K-mv-Ja9"/>
                     <connections>
                         <outlet property="astronaut" destination="2lP-WP-rhW" id="aWl-vP-Drl"/>
                         <outlet property="back" destination="3Bw-ab-5GT" id="gsm-7a-vl9"/>
@@ -1364,27 +1367,27 @@
                         <outlet property="question" destination="l7B-y6-KDx" id="TR8-r2-c9i"/>
                         <outlet property="smaller" destination="k8x-MY-eqf" id="Ahz-0F-DEQ"/>
                         <outlet property="submitBtn" destination="Ipg-D8-k66" id="2F1-zI-qY2"/>
-                        <segue destination="Hbl-Vc-ebS" kind="show" identifier="toCongrats" id="kzi-Gx-tnR"/>
-                        <segue destination="Lng-4k-13T" kind="show" identifier="toTryAgain" id="wGu-VF-hqd"/>
+                        <segue destination="Hbl-Vc-ebS" kind="presentation" identifier="toCongrats" modalPresentationStyle="fullScreen" id="kzi-Gx-tnR"/>
+                        <segue destination="Lng-4k-13T" kind="presentation" identifier="toTryAgain" modalPresentationStyle="fullScreen" id="wGu-VF-hqd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mc0-4y-cnm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-212" y="-282"/>
+            <point key="canvasLocation" x="-212.22222222222223" y="-282.22222222222223"/>
         </scene>
         <!--Level Four Game-->
         <scene sceneID="GR5-54-FQ7">
             <objects>
                 <viewController title="Level Four Game" id="HpZ-v0-WxA" customClass="LevelFourGame" customModule="Number_Line" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cVK-3I-AXk">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="stars" translatesAutoresizingMaskIntoConstraints="NO" id="fOk-cA-nR1">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gn-er-F8H" customClass="Line" customModule="Number_Line" customModuleProvider="target">
-                                <rect key="frame" x="79" y="199" width="866" height="150"/>
+                                <rect key="frame" x="79" y="215" width="922" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="5gn-er-F8H" secondAttribute="height" multiplier="433:75" id="NQR-NO-i3A"/>
                                 </constraints>
@@ -1408,7 +1411,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="KGi-3L-dde" kind="presentation" id="qOF-F9-vxY"/>
+                                    <segue destination="KGi-3L-dde" kind="presentation" modalPresentationStyle="fullScreen" id="qOF-F9-vxY"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="astronaut" translatesAutoresizingMaskIntoConstraints="NO" id="Y5X-aE-dpO">
@@ -1420,7 +1423,7 @@
                                 </accessibility>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwZ-d9-dlM">
-                                <rect key="frame" x="862" y="694" width="142" height="54"/>
+                                <rect key="frame" x="918" y="736" width="142" height="54"/>
                                 <color key="backgroundColor" red="0.42745098040000001" green="0.17254901959999999" blue="0.56470588239999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
@@ -1452,7 +1455,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eyD-iE-oKV">
-                                <rect key="frame" x="0.0" y="488" width="1024" height="162"/>
+                                <rect key="frame" x="0.0" y="488" width="1080" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -1482,6 +1485,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t9V-Po-Jpi"/>
                     </view>
+                    <navigationItem key="navigationItem" id="aZn-gG-uNX"/>
                     <connections>
                         <outlet property="astronaut" destination="Y5X-aE-dpO" id="ncR-B2-gyJ"/>
                         <outlet property="astronautTwo" destination="rkd-NL-TJY" id="aOZ-X2-HlD"/>
@@ -1491,13 +1495,13 @@
                         <outlet property="question" destination="uoM-5a-Boa" id="Sjp-xU-vhX"/>
                         <outlet property="questionNum" destination="aX2-qc-c5g" id="Sle-VB-8L9"/>
                         <outlet property="submitBtn" destination="dwZ-d9-dlM" id="rfl-ej-ULO"/>
-                        <segue destination="Hbl-Vc-ebS" kind="show" identifier="toCongrats" id="VIa-M0-xwV"/>
-                        <segue destination="Lng-4k-13T" kind="show" identifier="toTryAgain" id="RCo-6A-ySW"/>
+                        <segue destination="Hbl-Vc-ebS" kind="presentation" identifier="toCongrats" modalPresentationStyle="fullScreen" id="VIa-M0-xwV"/>
+                        <segue destination="Lng-4k-13T" kind="presentation" identifier="toTryAgain" modalPresentationStyle="fullScreen" id="RCo-6A-ySW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5fi-g2-Cbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-212.109375" y="442.96875"/>
+            <point key="canvasLocation" x="-212.22222222222223" y="442.96296296296293"/>
         </scene>
     </scenes>
     <resources>
@@ -1511,15 +1515,15 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="JNu-aT-A4Y"/>
-        <segue reference="di4-Dy-hc7"/>
-        <segue reference="qOF-F9-vxY"/>
-        <segue reference="uQI-Yn-X27"/>
+        <segue reference="FGA-ri-NDm"/>
+        <segue reference="wgO-CA-UzL"/>
+        <segue reference="Y3n-Si-I4X"/>
         <segue reference="MF3-H7-BYx"/>
         <segue reference="yLj-Mb-AOO"/>
         <segue reference="9Ju-uY-OcL"/>
-        <segue reference="RCo-6A-ySW"/>
-        <segue reference="VIa-M0-xwV"/>
-        <segue reference="mp5-z6-SKw"/>
+        <segue reference="i6z-KA-Gtd"/>
+        <segue reference="K1e-qQ-yTv"/>
+        <segue reference="dX5-pL-cTg"/>
         <segue reference="n49-uk-T4Q"/>
         <segue reference="UFV-fu-KT4"/>
     </inferredMetricsTieBreakers>
