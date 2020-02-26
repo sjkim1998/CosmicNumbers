@@ -42,8 +42,8 @@ class LevelOneGame: UIViewController {
         isAccessibilityElement = true
         
         let linerefbounds:CGRect=lineRef.bounds
-        var minXOfLine = lineRef.center.x-(linerefbounds.width/2) - 30
-        astronaut.frame = CGRect(x: minXOfLine + ((linerefbounds.width-40) / 5 * CGFloat(desiredNumber)),  y: lineRef.center.y, width: astronaut.frame.size.width, height: astronaut.frame.size.height)
+        let minXOfLine = lineRef.center.x-(linerefbounds.width/2) - 30
+        astronaut.frame = CGRect(x: minXOfLine + ((linerefbounds.width + 10) / 5 * CGFloat(desiredNumber)),  y: lineRef.center.y, width: astronaut.frame.size.width, height: astronaut.frame.size.height)
     }
     
     // when the user selects an answer choice, the program automatically deselect the previous button
