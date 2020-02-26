@@ -40,10 +40,15 @@ class LevelOneGame: UIViewController {
         
         // Make the screen accessible, and specify the question with a randomly chosen number from 0-5
         isAccessibilityElement = true
-        
         let linerefbounds:CGRect=lineRef.bounds
-        var minXOfLine = lineRef.center.x-(linerefbounds.width/2) - 30
-        astronaut.frame = CGRect(x: minXOfLine + ((linerefbounds.width-40) / 5 * CGFloat(desiredNumber)),  y: lineRef.center.y, width: astronaut.frame.size.width, height: astronaut.frame.size.height)
+        
+        // Creating the Tommy here
+        astronaut.frame = CGRect(
+            x: 180.8*CGFloat(desiredNumber) + 50.0,
+            y: lineRef.center.y - 10.0,
+            width: astronaut.frame.size.width,
+            height: astronaut.frame.size.height
+        )
     }
     
     // when the user selects an answer choice, the program automatically deselect the previous button
@@ -82,12 +87,21 @@ class LevelOneGame: UIViewController {
         let spaceBetweenLineAndText:CGFloat=10.0
         var i = 0
         
+        // Might be better to create Tommy here for the dynamic case.
+        
         // Create 5 labels and make them accessible
         while (i < lineRef.numberOfPoints+1) {
             let xdist = (distance*CGFloat(i))
             var minXOfLine = lineRef.center.x-(linerefbounds.width/2)
             var maxYOfLine = lineRef.center.y+(linerefbounds.height/2)
-            let label = UILabel(frame: CGRect(x: xdist+lineRef.offSetFromEdges + minXOfLine, y: maxYOfLine+spaceBetweenLineAndText, width: CGFloat(textWidth), height: CGFloat(textHeight)))
+            let label = UILabel(
+                frame: CGRect(
+                    x: xdist+lineRef.offSetFromEdges + minXOfLine,
+                    y: maxYOfLine+spaceBetweenLineAndText,
+                    width: CGFloat(textWidth),
+                    height: CGFloat(textHeight)
+                )
+            )
 
             label.isAccessibilityElement = true
             label.text = String(i)

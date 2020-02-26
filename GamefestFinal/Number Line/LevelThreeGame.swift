@@ -46,7 +46,11 @@ class LevelThreeGame: UIViewController {
         // update the position of the astronaut
         let linerefbounds:CGRect=lineRef.bounds
         var minXOfLine = lineRef.center.x-(linerefbounds.width/2) - 30
-        astronaut.frame = CGRect(x: minXOfLine + ((linerefbounds.width-40) / 5 * CGFloat(astronautNumber)),  y: lineRef.center.y, width: astronaut.frame.size.width, height: astronaut.frame.size.height)
+        astronaut.frame = CGRect(
+            x: 180.8*CGFloat(astronautNumber) + 50.0,
+            y: lineRef.center.y - 50,
+            width: astronaut.frame.size.width,
+            height: astronaut.frame.size.height)
     }
     
     // when the user selects an answer choice
